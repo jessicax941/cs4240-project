@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class CanvasBehaviour : MonoBehaviour
 {
-    public GameObject leftHand;
+    //public GameObject leftHand;
     public GameObject playerCamera;
 
-    private Vector3 offset;
+    private Canvas canvas;
+    private bool activeState;
 
     private void Start()
     {
-        offset = transform.position - leftHand.transform.position;
+        canvas = gameObject.GetComponent<Canvas>();
+        activeState = true;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            activeState = !activeState;
+            canvas.enabled = activeState;
+        }
     }
 
     void LateUpdate()
     {
-        transform.position = leftHand.transform.position + offset;
         transform.LookAt(2 * transform.position - playerCamera.transform.position, Vector3.up);
     }
 }

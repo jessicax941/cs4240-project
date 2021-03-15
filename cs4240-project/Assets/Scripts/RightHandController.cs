@@ -25,11 +25,13 @@ public class RightHandController : MonoBehaviour
         if (!grabbing && ViveInput.GetAxis(HandRole.RightHand, ControllerAxis.Trigger) == 1f)
         {
             GrabObject();
+            Debug.LogError("Grab");
         }
 
         if (grabbing && ViveInput.GetPressDown(HandRole.RightHand, ControllerButton.Grip))
         {
             DropObject();
+            Debug.LogError("Drop");
         }
     }
 
