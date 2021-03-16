@@ -1,24 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class InteractionZoneBehaviour : AbstractZoneBehaviour
+public class TransitionZoneBehaviour : AbstractZoneBehaviour
 {
     public GameObject popupPrefab;
-    public List<string> choices;
+    public string text;
     public float radius;
     public Vector3 popupScale;
+    public int newSceneIndex;
 
-    private int numChoices;
-    private int currChoice;
     private GameObject popup;
-    private InteractionZoneBehaviour selfZoneBehaviour;
+    private TransitionZoneBehaviour selfZoneBehaviour;
 
     void Start()
     {
-        numChoices = choices.Count - 1;
-        currChoice = 0;
-        selfZoneBehaviour = gameObject.GetComponent<InteractionZoneBehaviour>();
+        selfZoneBehaviour = gameObject.GetComponent<TransitionZoneBehaviour>();
     }
 
     void Update()
@@ -46,7 +44,7 @@ public class InteractionZoneBehaviour : AbstractZoneBehaviour
             popup = Instantiate(popupPrefab, gameObject.transform.position + gameObject.transform.up + directionToPlayer, gameObject.transform.rotation);
             popup.transform.localScale = popupScale;
             popup.GetComponent<PopupBehaviour>().parentZone = selfZoneBehaviour;
-            popup.GetComponent<PopupBehaviour>().textString = choices[currChoice];
+            popup.GetComponent<PopupBehaviour>().textString = "Would you like to move to " + text;
         }
     }
 
@@ -60,23 +58,21 @@ public class InteractionZoneBehaviour : AbstractZoneBehaviour
 
     public override void YesPressed()
     {
-        if (currChoice < numChoices) {
-            currChoice++;
-            UpdatePopupText();
-        }
+        StartCoroutine(LoadNextScene());
     }
 
     public override void NoPressed()
     {
-        if (currChoice < numChoices)
-        {
-            currChoice++;
-            UpdatePopupText();
-        }
+        // Do nothing
     }
 
-    private void UpdatePopupText()
+    private IEnumerator LoadNextScene()
     {
-        popup.GetComponent<PopupBehaviour>().UpdateText(choices[currChoice]);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(newSceneIndex);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

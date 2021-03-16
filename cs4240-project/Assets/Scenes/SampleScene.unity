@@ -623,6 +623,91 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2764438639851317026
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123625430354440269, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_Name
+      value: TransitionZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: text
+      value: New Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: radius
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupPrefab
+      value: 
+      objectReference: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: newSceneIndex
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
 --- !u!1001 &3081264410070165687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -679,9 +764,45 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: radius
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: popupPrefab
+      value: 
+      objectReference: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
       propertyPath: canvasPrefab
       value: 
       objectReference: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: popupScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: popupScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: popupScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: choices.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: choices.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: choices.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117158264881909713, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
+      propertyPath: choices.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba99395c2a0c69643a5f164f6ce4a3de, type: 3}
 --- !u!1001 &5721975635155586804
@@ -692,9 +813,45 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: radius
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: popupPrefab
+      value: 
+      objectReference: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: canvasPrefab
       value: 
       objectReference: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: popupScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: popupScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: popupScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: choices.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: choices.Array.data[0]
+      value: a
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: choices.Array.data[1]
+      value: b
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: choices.Array.data[2]
+      value: c
+      objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423698, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_Name
       value: InteractionZone
@@ -743,7 +900,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1067697766841677390, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+    - {fileID: 2113831271, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
 --- !u!1001 &5748302590116241994
 PrefabInstance:
@@ -800,5 +959,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5351051127063073976, guid: a68e57782a7341144846936056fd5217, type: 3}
+      propertyPath: titleText
+      value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351051127063073976, guid: a68e57782a7341144846936056fd5217, type: 3}
+      propertyPath: popupScale.x
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351051127063073976, guid: a68e57782a7341144846936056fd5217, type: 3}
+      propertyPath: popupScale.y
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351051127063073976, guid: a68e57782a7341144846936056fd5217, type: 3}
+      propertyPath: popupScale.z
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351051127063073976, guid: a68e57782a7341144846936056fd5217, type: 3}
+      propertyPath: descriptonText
+      value: Just a cube. What more could you want?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351051127063073976, guid: a68e57782a7341144846936056fd5217, type: 3}
+      propertyPath: grabbableDescriptorPrefab
+      value: 
+      objectReference: {fileID: 1620563072451519506, guid: 13a9b36d5cf3e574194d43570e4fff44, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68e57782a7341144846936056fd5217, type: 3}

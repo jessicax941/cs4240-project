@@ -125,3 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8ea8f54e87b3e4f9cabd5d0a9e86d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabbableDescriptorPrefab: {fileID: 0}
+  titleText: 
+  descriptonText: 
+  grabbed: 0
+  popupScale: {x: 0.001, y: 0.001, z: 0.001}

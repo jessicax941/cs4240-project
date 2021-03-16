@@ -25,13 +25,11 @@ public class RightHandController : MonoBehaviour
         if (!grabbing && ViveInput.GetAxis(HandRole.RightHand, ControllerAxis.Trigger) == 1f)
         {
             GrabObject();
-            Debug.LogError("Grab");
         }
 
         if (grabbing && ViveInput.GetPressDown(HandRole.RightHand, ControllerButton.Grip))
         {
             DropObject();
-            Debug.LogError("Drop");
         }
     }
 
@@ -67,11 +65,13 @@ public class RightHandController : MonoBehaviour
             grabbedObject.transform.position = transform.position + transform.forward.normalized; // grabbedObject will be set at the offset
             grabbedObject.transform.rotation = transform.rotation; // set rotation of object to the parent's rotation
             grabbedObject.transform.parent = transform; // grabbedObject set as child of the controller so will move together
+            grabbedObject.GetComponent<GrabbableBehaviour>().grabbed = true;
         }
     }
 
     void DropObject()
     {
+        grabbedObject.GetComponent<GrabbableBehaviour>().grabbed = false;
         grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
         grabbedObject.transform.parent = null;
         grabbedObject = null;
