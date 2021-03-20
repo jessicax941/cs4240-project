@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 430650}
   - component: {fileID: 11436490}
   - component: {fileID: 11450602}
-  - component: {fileID: 1158209822}
+  - component: {fileID: 112243187}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -406,7 +406,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   role: -2
---- !u!114 &1158209822
+--- !u!114 &112243187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e873b00bf03e2e4bb813a751ce97018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabRadius: 1
+  grabRadius: 5
   grabMask:
     serializedVersion: 2
     m_Bits: 8

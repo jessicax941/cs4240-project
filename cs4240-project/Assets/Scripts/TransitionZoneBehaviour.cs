@@ -9,7 +9,7 @@ public class TransitionZoneBehaviour : AbstractZoneBehaviour
     public string text;
     public float radius;
     public Vector3 popupScale;
-    public int newSceneIndex;
+    public string newSceneName;
 
     private GameObject popup;
     private TransitionZoneBehaviour selfZoneBehaviour;
@@ -68,7 +68,7 @@ public class TransitionZoneBehaviour : AbstractZoneBehaviour
 
     private IEnumerator LoadNextScene()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(newSceneIndex);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(newSceneName);
 
         while (!asyncLoad.isDone)
         {
