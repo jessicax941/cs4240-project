@@ -42,7 +42,7 @@ MonoBehaviour:
   m_simulatorRightControllerModel: 2
   m_simulatorOtherModel: 3
   m_activateUnityNativeVRModule: 1
-  m_activateUnityXRModule: 1
+  m_activateUnityXRModule: 0
   m_activateWaveVRModule: 1
   m_simulateWaveVR6DoFController: 0
   m_waveVRAddVirtualArmTo3DoFController: 1
