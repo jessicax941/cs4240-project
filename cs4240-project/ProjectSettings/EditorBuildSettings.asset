@@ -8,24 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenuScene.unity
     guid: 67adac43bcf286444be612074ab04f75
-  - enabled: 0
-    path: Assets/Scenes/StartMenuScene1.unity
-    guid: b28436ae9d513e94f905806845cfe473
-  - enabled: 1
-    path: Assets/Scenes/nicholas_foodcourt.unity
-    guid: e9f2a29c95d7fd347a131541cac1944f
-  - enabled: 1
-    path: Assets/Scenes/Alexis_supermarket.unity
-    guid: 010e045ff4383c248bad66e955986a6e
-  - enabled: 0
-    path: Assets/Scenes/Scene1.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/Scene2.unity
-    guid: 87fabbfed97192448a378d973adcc1eb
-  - enabled: 1
-    path: Assets/Scenes/StartMenuScene1.unity
-    guid: b28436ae9d513e94f905806845cfe473
   - enabled: 1
     path: Assets/Scenes/nicholas_foodcourt.unity
     guid: e9f2a29c95d7fd347a131541cac1944f
@@ -38,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/nicholas_evaluation_bad.unity
     guid: 59da3ce97c793e443adbd6f3bd01a3db
+  - enabled: 0
+    path: Assets/Scenes/Scene1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/Scene2.unity
+    guid: 87fabbfed97192448a378d973adcc1eb
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: b88044a0aa581e1429a5865ae5cab71e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f72962fe53918844a860c2f7c282a1b2, type: 2}
