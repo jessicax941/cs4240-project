@@ -3364,6 +3364,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 515787324044268060, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartApp
+      objectReference: {fileID: 0}
+    - target: {fileID: 515787324044268060, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StartMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3151177905141508868, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
       propertyPath: m_Name
       value: StartMenuCanvas
