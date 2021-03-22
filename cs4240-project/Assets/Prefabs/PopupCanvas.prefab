@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2925913861661828598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +136,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2925913861661828603}
     m_Modifications:
+    - target: {fileID: 22661880820083165, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_Name
+      value: BadChoiceButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 22661881078401664, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_Text
+      value: Bad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325435930881176142, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_Name
+      value: GoodChoiceButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325435931075924243, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_Text
+      value: Good
+      objectReference: {fileID: 0}
     - target: {fileID: 7458204275812170916, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
       propertyPath: m_Name
       value: PopupContents

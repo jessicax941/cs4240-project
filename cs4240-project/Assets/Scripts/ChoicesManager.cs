@@ -7,6 +7,8 @@ public class ChoicesManager : MonoBehaviour
 
     public static ChoicesManager instance;
 
+    private int score;
+
     void Awake()
     {
         // Ensure only one instance of ChoicesManager
@@ -21,6 +23,16 @@ public class ChoicesManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void IncrementScore()
+    {
+        score++;
+    }
+
+    public void DecrementScore()
+    {
+        score--;
     }
 
     // Start is called before the first frame update

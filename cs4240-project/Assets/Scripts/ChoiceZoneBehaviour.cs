@@ -1,22 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class TransitionZoneBehaviour : InteractionZoneBehaviour
+public class ChoiceZoneBehaviour : InteractionZoneBehaviour
 {
     public GameObject popupPrefab;
-    public string prompt;
+    public List<string> choices;
     public float radius;
     public Vector3 popupScale;
-    public string nextSceneName;
+    public string prompt;
 
+    [SerializeField]
+    private ChoicesManager choicesManager;
+    private int numChoices;
+    private int currChoice;
     private GameObject popupObject;
-    // private TransitionZoneBehaviour selfZoneBehaviour;
+    // private InteractionZoneBehaviour selfZoneBehaviour;
 
     void Start()
     {
-        // selfZoneBehaviour = gameObject.GetComponent<TransitionZoneBehaviour>();
+        numChoices = choices.Count - 1;
+        currChoice = 0;
+        // selfZoneBehaviour = gameObject.GetComponent<InteractionZoneBehaviour>();
     }
 
     void Update()
@@ -30,33 +35,21 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
             DestroyPopup(popupObject);
         }
     }
-
-    public void TransitionToNextScene()
+    public void ChoseGoodChoice()
     {
-        StartCoroutine(LoadNextScene());
-    }
-
-    private IEnumerator LoadNextScene()
-    {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextSceneName);
-
-        while (!asyncLoad.isDone)
+        if (choicesManager != null)
         {
-            yield return null;
+            choicesManager.IncrementScore();
         }
     }
 
-    // void Update()
-    // {
-    //     if (!popup && IsPlayerNearby())
-    //     {
-    //         CreatePopup();
-    //     }
-    //     else if (popup && !IsPlayerNearby())
-    //     {
-    //         DestroyPopup();
-    //     }
-    // }
+    public void ChoseBadChoice()
+    {
+        if (choicesManager != null)
+        {
+            choicesManager.DecrementScore();
+        }
+    }
 
     // private bool IsPlayerNearby()
     // {
@@ -71,7 +64,7 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     //         popup = Instantiate(popupPrefab, gameObject.transform.position + gameObject.transform.up + directionToPlayer, gameObject.transform.rotation);
     //         popup.transform.localScale = popupScale;
     //         popup.GetComponent<PopupBehaviour>().parentZone = selfZoneBehaviour;
-    //         popup.GetComponent<PopupBehaviour>().textString = "Would you like to move to " + text;
+    //         popup.GetComponent<PopupBehaviour>().prompt = choices[currChoice];
     //     }
     // }
 
@@ -83,14 +76,28 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     //     }
     // }
 
+
+
     // public override void YesPressed()
     // {
-    //     StartCoroutine(LoadNextScene());
+    //     if (currChoice < numChoices)
+    //     {
+    //         currChoice++;
+    //         UpdatePopupText();
+    //     }
     // }
 
     // public override void NoPressed()
     // {
-    //     // Do nothing
+    //     if (currChoice < numChoices)
+    //     {
+    //         currChoice++;
+    //         UpdatePopupText();
+    //     }
     // }
 
+    // private void UpdatePopupText()
+    // {
+    //     popupObject.GetComponent<PopupBehaviour>().UpdateText(choices[currChoice]);
+    // }
 }

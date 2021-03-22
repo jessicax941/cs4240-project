@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/nicholas_foodcourt.unity
     guid: e9f2a29c95d7fd347a131541cac1944f
   - enabled: 1
-    path: Assets/Scenes/Alexis_supermarket.unity
+    path: Assets/Scenes/Supermarket.unity
     guid: 010e045ff4383c248bad66e955986a6e
   - enabled: 1
     path: Assets/Scenes/nicholas_evaluation_good.unity
