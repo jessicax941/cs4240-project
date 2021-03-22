@@ -83,7 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3864049178709152420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3864049178709152425}
     m_Modifications:
+    - target: {fileID: 1835032567782476592, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1835032568124500074, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -155,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1835032568124500074, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -48
+      value: -58.5
       objectReference: {fileID: 0}
     - target: {fileID: 8781283182648922463, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -169,6 +173,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8781283182856204805, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
+      propertyPath: m_Text
+      value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781283182856204805, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8781283182970487848, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -176,6 +188,10 @@ PrefabInstance:
     - target: {fileID: 8781283182970487855, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 86.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781283183428239062, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 8781283183428239063, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_AnchorMax.x

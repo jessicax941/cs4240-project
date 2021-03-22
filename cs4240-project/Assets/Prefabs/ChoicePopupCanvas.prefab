@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2925913861661828598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +327,50 @@ PrefabInstance:
     - target: {fileID: 7458204276785021737, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375684, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375687, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976611893729375687, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
