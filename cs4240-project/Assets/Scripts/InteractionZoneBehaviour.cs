@@ -26,24 +26,25 @@ public class InteractionZoneBehaviour : MonoBehaviour
         return ((transform.position - Camera.main.transform.position).magnitude < radius);
     }
 
-    protected void CreatePopup(GameObject popup, GameObject popupPrefab, Vector3 popupScale, InteractionZoneBehaviour zoneBehaviour, string prompt)
+    protected GameObject CreatePopup(GameObject popupPrefab, Vector3 popupScale, InteractionZoneBehaviour zoneBehaviour, string prompt)
     {
-        if (!popup)
+        Vector3 directionToPlayer = (Camera.main.transform.position - gameObject.transform.position).normalized;
+        GameObject createdPopup = Instantiate(popupPrefab, gameObject.transform.position + gameObject.transform.up + directionToPlayer, gameObject.transform.rotation);
+        createdPopup.transform.localScale = popupScale;
+
+        if (zoneBehaviour.GetType() == typeof(ChoiceZoneBehaviour))
         {
-            Vector3 directionToPlayer = (Camera.main.transform.position - gameObject.transform.position).normalized;
-            popup = Instantiate(popupPrefab, gameObject.transform.position + gameObject.transform.up + directionToPlayer, gameObject.transform.rotation);
-            popup.transform.localScale = popupScale;
-            if (zoneBehaviour.GetType() == typeof(ChoiceZoneBehaviour))
-            {
-                popup.GetComponent<ChoicePopupBehaviour>().parentZone = (ChoiceZoneBehaviour)zoneBehaviour;
-                popup.GetComponent<ChoicePopupBehaviour>().prompt = prompt;
-            }
-            if (zoneBehaviour.GetType() == typeof(TransitionZoneBehaviour))
-            {
-                popup.GetComponent<ChoicePopupBehaviour>().parentZone = (TransitionZoneBehaviour)zoneBehaviour;
-                popup.GetComponent<ChoicePopupBehaviour>().prompt = prompt;
-            }
+            createdPopup.GetComponent<ChoicePopupBehaviour>().parentZone = (ChoiceZoneBehaviour)zoneBehaviour;
+            createdPopup.GetComponent<ChoicePopupBehaviour>().prompt = prompt;
         }
+
+        if (zoneBehaviour.GetType() == typeof(TransitionZoneBehaviour))
+        {
+            createdPopup.GetComponent<TransitionPopupBehaviour>().parentZone = (TransitionZoneBehaviour)zoneBehaviour;
+            createdPopup.GetComponent<TransitionPopupBehaviour>().prompt = prompt;
+        }
+
+        return createdPopup;
     }
 
     protected void DestroyPopup(GameObject popup)

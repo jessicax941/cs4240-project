@@ -9,13 +9,17 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     public string prompt;
     public float radius;
     public Vector3 popupScale;
+    public bool isLastScene = false;
     public string nextSceneName;
+
+    private GameObject choicesManager;
 
     private GameObject popupObject;
     // private TransitionZoneBehaviour selfZoneBehaviour;
 
     void Start()
     {
+        choicesManager = GameObject.Find("ChoicesManager");
         // selfZoneBehaviour = gameObject.GetComponent<TransitionZoneBehaviour>();
     }
 
@@ -23,7 +27,7 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     {
         if (!popupObject && base.IsPlayerNearby(radius))
         {
-            base.CreatePopup(popupObject, popupPrefab, popupScale, this, prompt);
+            popupObject = base.CreatePopup(popupPrefab, popupScale, this, prompt);
         }
         else if (popupObject && !base.IsPlayerNearby(radius))
         {
@@ -33,16 +37,34 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
 
     public void TransitionToNextScene()
     {
-        StartCoroutine(LoadNextScene());
+        Debug.Log("Transition to next scene");
+
+        if (isLastScene && choicesManager)
+        {
+
+            nextSceneName = choicesManager.GetComponent<ChoicesManager>().GetFinalSceneName();
+        }
+
+        if (nextSceneName == "")
+        {
+            Debug.LogWarning("nextSceneName is empty!");
+            return;
+        }
+
+        SceneManager.LoadScene(nextSceneName);
+        // StartCoroutine(LoadNextScene());
     }
 
     private IEnumerator LoadNextScene()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextSceneName);
-
-        while (!asyncLoad.isDone)
+        Debug.Log("Loading next scene");
+        if (nextSceneName != "")
         {
-            yield return null;
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextSceneName);
+            while (!asyncLoad.isDone)
+            {
+                yield return null;
+            }
         }
     }
 

@@ -8,19 +8,23 @@ public class ChoicePopupBehaviour : MonoBehaviour
     public ChoiceZoneBehaviour parentZone;
     public string prompt;
 
-    private Text text;
+    private Text promptText;
     private Button goodChoiceButton;
     private Button badChoiceButton;
 
     private void Start()
     {
-        Transform popupContents = gameObject.transform.Find("PopupContents");
-        text = popupContents.Find("Text").GetComponent<Text>();
-        goodChoiceButton = popupContents.Find("GoodChoiceButton").GetComponent<Button>();
-        badChoiceButton = popupContents.Find("BadChoiceButton").GetComponent<Button>();
-        goodChoiceButton.onClick.AddListener(() => { parentZone.ChoseGoodChoice(); });
-        badChoiceButton.onClick.AddListener(() => { parentZone.ChoseBadChoice(); });
-        text.text = prompt;
+        Transform popupContents = gameObject.transform.Find("ChoicePopupContents");
+        promptText = popupContents.Find("Text").GetComponent<Text>();
+        promptText.text = prompt;
+
+        Transform goodChoiceButton = popupContents.Find("GoodChoiceButton");
+        goodChoiceButton.GetComponent<Button>().onClick.AddListener(() => { parentZone.ChoseGoodChoice(); });
+        goodChoiceButton.Find("Text").GetComponent<Text>().text = parentZone.goodChoiceText;
+
+        Transform badChoiceButton = popupContents.Find("BadChoiceButton");
+        badChoiceButton.GetComponent<Button>().onClick.AddListener(() => { parentZone.ChoseBadChoice(); });
+        badChoiceButton.Find("Text").GetComponent<Text>().text = parentZone.badChoiceText;
     }
 
     void LateUpdate()
@@ -30,6 +34,6 @@ public class ChoicePopupBehaviour : MonoBehaviour
 
     public void UpdateText(string newText)
     {
-        text.text = newText;
+        promptText.text = newText;
     }
 }

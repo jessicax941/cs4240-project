@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7458204275812170913}
   - component: {fileID: 7458204275812170918}
   m_Layer: 5
-  m_Name: PopupContents
+  m_Name: ChoicePopupContents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,6 +165,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7458204275812170919}
     m_Modifications:
+    - target: {fileID: 61975549768737443, guid: 792154079d2a44641a52651c23dee789, type: 3}
+      propertyPath: m_Text
+      value: Bad
+      objectReference: {fileID: 0}
     - target: {fileID: 61975550010212857, guid: 792154079d2a44641a52651c23dee789, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -251,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 61975550010212862, guid: 792154079d2a44641a52651c23dee789, type: 3}
       propertyPath: m_Name
-      value: BadButton
+      value: BadChoiceButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 792154079d2a44641a52651c23dee789, type: 3}
@@ -267,6 +271,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7458204275812170919}
     m_Modifications:
+    - target: {fileID: 61975549768737443, guid: 792154079d2a44641a52651c23dee789, type: 3}
+      propertyPath: m_Text
+      value: Good
+      objectReference: {fileID: 0}
     - target: {fileID: 61975550010212857, guid: 792154079d2a44641a52651c23dee789, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -353,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 61975550010212862, guid: 792154079d2a44641a52651c23dee789, type: 3}
       propertyPath: m_Name
-      value: GoodButton
+      value: GoodChoiceButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 792154079d2a44641a52651c23dee789, type: 3}

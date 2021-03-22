@@ -9,9 +9,10 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     public float radius;
     public Vector3 popupScale;
     public string prompt;
+    public string goodChoiceText;
+    public string badChoiceText;
 
-    [SerializeField]
-    private ChoicesManager choicesManager;
+    private GameObject choicesManager;
     private int numChoices;
     private int currChoice;
     private GameObject popupObject;
@@ -21,6 +22,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         numChoices = choices.Count - 1;
         currChoice = 0;
+        choicesManager = GameObject.Find("ChoicesManager");
         // selfZoneBehaviour = gameObject.GetComponent<InteractionZoneBehaviour>();
     }
 
@@ -28,7 +30,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (!popupObject && base.IsPlayerNearby(radius))
         {
-            base.CreatePopup(popupObject, popupPrefab, popupScale, this, prompt);
+            popupObject = base.CreatePopup(popupPrefab, popupScale, this, prompt);
         }
         else if (popupObject && !base.IsPlayerNearby(radius))
         {
@@ -39,7 +41,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (choicesManager != null)
         {
-            choicesManager.IncrementScore();
+            choicesManager.GetComponent<ChoicesManager>().IncrementScore();
         }
     }
 
@@ -47,7 +49,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (choicesManager != null)
         {
-            choicesManager.DecrementScore();
+            choicesManager.GetComponent<ChoicesManager>().DecrementScore();
         }
     }
 

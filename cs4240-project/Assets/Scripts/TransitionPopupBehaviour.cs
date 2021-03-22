@@ -9,16 +9,16 @@ public class TransitionPopupBehaviour : MonoBehaviour
     public string prompt;
 
     private Text text;
-    private Button okayButton;
+    private Button yesButton;
 
     private void Start()
     {
-        Transform popupContents = gameObject.transform.Find("PopupContents");
+        Transform popupContents = gameObject.transform.Find("TransitionPopupContents");
         text = popupContents.Find("Text").GetComponent<Text>();
         text.text = prompt;
 
-        okayButton = popupContents.Find("OkayButton").GetComponent<Button>();
-        okayButton.onClick.AddListener(() => { parentZone.TransitionToNextScene(); });
+        yesButton = popupContents.Find("YesButton").GetComponent<Button>();
+        yesButton.onClick.AddListener(() => { parentZone.TransitionToNextScene(); });
     }
 
     void LateUpdate()

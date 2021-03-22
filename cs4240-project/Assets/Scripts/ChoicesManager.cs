@@ -7,7 +7,7 @@ public class ChoicesManager : MonoBehaviour
 
     public static ChoicesManager instance;
 
-    private int score;
+    private int score = 0;
 
     void Awake()
     {
@@ -33,6 +33,18 @@ public class ChoicesManager : MonoBehaviour
     public void DecrementScore()
     {
         score--;
+    }
+
+    public string GetFinalSceneName()
+    {
+        if (score >= 0)
+        {
+            return "EvaluationScene_Good";
+        }
+        else
+        {
+            return "EvaluationScene_Bad";
+        }
     }
 
     // Start is called before the first frame update
