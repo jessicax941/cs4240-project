@@ -7,6 +7,8 @@ public class ChoicesManager : MonoBehaviour
 
     public static ChoicesManager instance;
 
+    private int score = 0;
+
     void Awake()
     {
         // Ensure only one instance of ChoicesManager
@@ -21,6 +23,30 @@ public class ChoicesManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void IncrementScore()
+    {
+        score++;
+        Debug.Log("Score: " + score);
+    }
+
+    public void DecrementScore()
+    {
+        score--;
+        Debug.Log("Score: " + score);
+    }
+
+    public string GetFinalSceneName()
+    {
+        if (score >= 0)
+        {
+            return "EvaluationScene_Good";
+        }
+        else
+        {
+            return "EvaluationScene_Bad";
+        }
     }
 
     // Start is called before the first frame update

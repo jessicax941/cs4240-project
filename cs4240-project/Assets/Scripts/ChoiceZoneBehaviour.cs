@@ -1,26 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class TransitionZoneBehaviour : InteractionZoneBehaviour
+public class ChoiceZoneBehaviour : InteractionZoneBehaviour
 {
     public GameObject popupCanvas;
-    public string prompt;
+    public List<string> choices;
     public float radius;
     public Vector3 popupScale;
-    public bool isLastScene = false;
-    public string nextSceneName;
+    public string prompt;
+    public string goodChoiceText;
+    public string badChoiceText;
 
     private GameObject choicesManager;
-
+    private int numChoices;
+    private int currChoice;
     private GameObject popupObject;
-    // private TransitionZoneBehaviour selfZoneBehaviour;
+    // private InteractionZoneBehaviour selfZoneBehaviour;
 
     void Start()
     {
+        numChoices = choices.Count - 1;
+        currChoice = 0;
         choicesManager = GameObject.Find("ChoicesManager");
-        // selfZoneBehaviour = gameObject.GetComponent<TransitionZoneBehaviour>();
+        // selfZoneBehaviour = gameObject.GetComponent<InteractionZoneBehaviour>();
     }
 
     void Update()
@@ -34,51 +37,29 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
             DestroyPopup(popupObject);
         }
     }
-
-    public void TransitionToNextScene()
+    public void ChoseGoodChoice()
     {
-        Debug.Log("Transition to next scene");
-
-        if (isLastScene && choicesManager)
+        if (choicesManager)
         {
-
-            nextSceneName = choicesManager.GetComponent<ChoicesManager>().GetFinalSceneName();
+            choicesManager.GetComponent<ChoicesManager>().IncrementScore();
         }
-
-        if (nextSceneName == "")
+        else
         {
-            Debug.LogWarning("nextSceneName is empty!");
-            return;
-        }
-
-        SceneManager.LoadScene(nextSceneName);
-        // StartCoroutine(LoadNextScene());
-    }
-
-    private IEnumerator LoadNextScene()
-    {
-        Debug.Log("Loading next scene");
-        if (nextSceneName != "")
-        {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextSceneName);
-            while (!asyncLoad.isDone)
-            {
-                yield return null;
-            }
+            Debug.LogWarning("choicesManager is null");
         }
     }
 
-    // void Update()
-    // {
-    //     if (!popup && IsPlayerNearby())
-    //     {
-    //         CreatePopup();
-    //     }
-    //     else if (popup && !IsPlayerNearby())
-    //     {
-    //         DestroyPopup();
-    //     }
-    // }
+    public void ChoseBadChoice()
+    {
+        if (choicesManager)
+        {
+            choicesManager.GetComponent<ChoicesManager>().DecrementScore();
+        }
+        else
+        {
+            Debug.LogWarning("choicesManager is null");
+        }
+    }
 
     // private bool IsPlayerNearby()
     // {
@@ -93,7 +74,7 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     //         popup = Instantiate(popupPrefab, gameObject.transform.position + gameObject.transform.up + directionToPlayer, gameObject.transform.rotation);
     //         popup.transform.localScale = popupScale;
     //         popup.GetComponent<PopupBehaviour>().parentZone = selfZoneBehaviour;
-    //         popup.GetComponent<PopupBehaviour>().textString = "Would you like to move to " + text;
+    //         popup.GetComponent<PopupBehaviour>().prompt = choices[currChoice];
     //     }
     // }
 
@@ -105,14 +86,28 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     //     }
     // }
 
+
+
     // public override void YesPressed()
     // {
-    //     StartCoroutine(LoadNextScene());
+    //     if (currChoice < numChoices)
+    //     {
+    //         currChoice++;
+    //         UpdatePopupText();
+    //     }
     // }
 
     // public override void NoPressed()
     // {
-    //     // Do nothing
+    //     if (currChoice < numChoices)
+    //     {
+    //         currChoice++;
+    //         UpdatePopupText();
+    //     }
     // }
 
+    // private void UpdatePopupText()
+    // {
+    //     popupObject.GetComponent<PopupBehaviour>().UpdateText(choices[currChoice]);
+    // }
 }

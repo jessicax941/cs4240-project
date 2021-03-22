@@ -2,81 +2,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionZoneBehaviour : AbstractZoneBehaviour
+public class InteractionZoneBehaviour : MonoBehaviour
 {
-    public GameObject popupPrefab;
-    public List<string> choices;
-    public float radius;
-    public Vector3 popupScale;
+    // public abstract void ChoseGoodChoice();
+    // public abstract void ChoseBadChoice();
+    // public abstract void YesPressed();
+    // public abstract void NoPressed();
 
-    private int numChoices;
-    private int currChoice;
-    private GameObject popup;
-    private InteractionZoneBehaviour selfZoneBehaviour;
+    // void Update()
+    // {
+    //     if (!popup && IsPlayerNearby())
+    //     {
+    //         CreatePopup();
+    //     }
+    //     else if (popup && !IsPlayerNearby())
+    //     {
+    //         DestroyPopup();
+    //     }
+    // }
 
-    void Start()
-    {
-        numChoices = choices.Count - 1;
-        currChoice = 0;
-        selfZoneBehaviour = gameObject.GetComponent<InteractionZoneBehaviour>();
-    }
-
-    void Update()
-    {
-        if (!popup && IsPlayerNearby())
-        {
-            CreatePopup();
-        }
-        else if (popup && !IsPlayerNearby())
-        {
-            DestroyPopup();
-        }
-    }
-
-    private bool IsPlayerNearby()
+    protected bool IsPlayerNearby(float radius)
     {
         return ((transform.position - Camera.main.transform.position).magnitude < radius);
     }
 
-    private void CreatePopup()
+    protected GameObject CreatePopup(GameObject popupPrefab, Vector3 popupScale, InteractionZoneBehaviour zoneBehaviour, string prompt)
     {
-        if (!popup)
+        Vector3 directionToPlayer = (Camera.main.transform.position - gameObject.transform.position).normalized;
+        GameObject createdPopup = Instantiate(popupPrefab, gameObject.transform.position + gameObject.transform.up + directionToPlayer, gameObject.transform.rotation);
+        createdPopup.transform.localScale = popupScale;
+
+        if (zoneBehaviour.GetType() == typeof(ChoiceZoneBehaviour))
         {
-            Vector3 directionToPlayer = (Camera.main.transform.position - gameObject.transform.position).normalized;
-            popup = Instantiate(popupPrefab, gameObject.transform.position + gameObject.transform.up + directionToPlayer, gameObject.transform.rotation);
-            popup.transform.localScale = popupScale;
-            popup.GetComponent<PopupBehaviour>().parentZone = selfZoneBehaviour;
-            popup.GetComponent<PopupBehaviour>().textString = choices[currChoice];
+            createdPopup.GetComponent<ChoicePopupBehaviour>().parentZone = (ChoiceZoneBehaviour)zoneBehaviour;
+            createdPopup.GetComponent<ChoicePopupBehaviour>().prompt = prompt;
         }
+
+        if (zoneBehaviour.GetType() == typeof(TransitionZoneBehaviour))
+        {
+            createdPopup.GetComponent<TransitionPopupBehaviour>().parentZone = (TransitionZoneBehaviour)zoneBehaviour;
+            createdPopup.GetComponent<TransitionPopupBehaviour>().prompt = prompt;
+        }
+
+        return createdPopup;
     }
 
-    private void DestroyPopup()
+    protected void DestroyPopup(GameObject popup)
     {
         if (popup)
         {
             Destroy(popup);
         }
-    }
-
-    public override void YesPressed()
-    {
-        if (currChoice < numChoices) {
-            currChoice++;
-            UpdatePopupText();
-        }
-    }
-
-    public override void NoPressed()
-    {
-        if (currChoice < numChoices)
-        {
-            currChoice++;
-            UpdatePopupText();
-        }
-    }
-
-    private void UpdatePopupText()
-    {
-        popup.GetComponent<PopupBehaviour>().UpdateText(choices[currChoice]);
     }
 }
