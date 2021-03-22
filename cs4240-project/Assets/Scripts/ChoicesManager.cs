@@ -28,11 +28,13 @@ public class ChoicesManager : MonoBehaviour
     public void IncrementScore()
     {
         score++;
+        Debug.Log("Score: " + score);
     }
 
     public void DecrementScore()
     {
         score--;
+        Debug.Log("Score: " + score);
     }
 
     public string GetFinalSceneName()

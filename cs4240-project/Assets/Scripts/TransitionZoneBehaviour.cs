@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TransitionZoneBehaviour : InteractionZoneBehaviour
 {
-    public GameObject popupPrefab;
+    public GameObject popupCanvas;
     public string prompt;
     public float radius;
     public Vector3 popupScale;
@@ -27,7 +27,7 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     {
         if (!popupObject && base.IsPlayerNearby(radius))
         {
-            popupObject = base.CreatePopup(popupPrefab, popupScale, this, prompt);
+            popupObject = base.CreatePopup(popupCanvas, popupScale, this, prompt);
         }
         else if (popupObject && !base.IsPlayerNearby(radius))
         {

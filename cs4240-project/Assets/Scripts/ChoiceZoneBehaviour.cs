@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChoiceZoneBehaviour : InteractionZoneBehaviour
 {
-    public GameObject popupPrefab;
+    public GameObject popupCanvas;
     public List<string> choices;
     public float radius;
     public Vector3 popupScale;
@@ -30,7 +30,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (!popupObject && base.IsPlayerNearby(radius))
         {
-            popupObject = base.CreatePopup(popupPrefab, popupScale, this, prompt);
+            popupObject = base.CreatePopup(popupCanvas, popupScale, this, prompt);
         }
         else if (popupObject && !base.IsPlayerNearby(radius))
         {
@@ -39,17 +39,25 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     }
     public void ChoseGoodChoice()
     {
-        if (choicesManager != null)
+        if (choicesManager)
         {
             choicesManager.GetComponent<ChoicesManager>().IncrementScore();
+        }
+        else
+        {
+            Debug.LogWarning("choicesManager is null");
         }
     }
 
     public void ChoseBadChoice()
     {
-        if (choicesManager != null)
+        if (choicesManager)
         {
             choicesManager.GetComponent<ChoicesManager>().DecrementScore();
+        }
+        else
+        {
+            Debug.LogWarning("choicesManager is null");
         }
     }
 
