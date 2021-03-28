@@ -722,8 +722,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+--- !u!1 &167061156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5721975636434423698, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+  m_PrefabInstance: {fileID: 167061155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &167061157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167061156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a765a9a8c8ea2f4698ae2f796722eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+  choices: []
+  radius: 6
+  popupScale: {x: 0.01, y: 0.01, z: 0.01}
+  prompt: Takeaway or dining in?
+  goodChoiceText: Dining in
+  badChoiceText: Takeaway
 --- !u!1001 &170200946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6525,8 +6550,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+--- !u!1 &1638113019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5721975636434423698, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+  m_PrefabInstance: {fileID: 1638113018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1638113020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638113019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a765a9a8c8ea2f4698ae2f796722eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+  choices: []
+  radius: 6
+  popupScale: {x: 0.01, y: 0.01, z: 0.01}
+  prompt: Takeaway or dining in?
+  goodChoiceText: Dining in
+  badChoiceText: Takeaway
 --- !u!1001 &1653926567
 PrefabInstance:
   m_ObjectHideFlags: 0
