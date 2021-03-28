@@ -647,83 +647,6 @@ Transform:
   m_Father: {fileID: 968750466}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1001 &167061155
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: prompt
-      value: Takeaway or dining in?
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: popupCanvas
-      value: 
-      objectReference: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: popupPrefab
-      value: 
-      objectReference: {fileID: 7458204275812170916, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: badChoiceText
-      value: Takeaway
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: goodChoiceText
-      value: Dining in
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423698, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_Name
-      value: ChoiceZone (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 13.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
 --- !u!1001 &170200946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5140,15 +5063,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.215
+      value: 0.449
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -1.121
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.23
+      value: -0.905
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5187,9 +5110,25 @@ PrefabInstance:
       value: Do you want to go to the supermarket?
       objectReference: {fileID: 0}
     - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: radius
+      value: 4.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: popupCanvas
       value: 
       objectReference: {fileID: 6762721848806597837, guid: 1db189e6d444dc14fa180d20e0f51974, type: 3}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.y
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.z
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: nextSceneName
       value: Supermarket
@@ -6450,83 +6389,6 @@ Transform:
   m_Father: {fileID: 968750466}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1001 &1638113018
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: prompt
-      value: Takeaway or dining in?
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: popupCanvas
-      value: 
-      objectReference: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: popupPrefab
-      value: 
-      objectReference: {fileID: 7458204275812170916, guid: 2eb695f1306d64941b6625307543c1e3, type: 3}
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: badChoiceText
-      value: Takeaway
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: goodChoiceText
-      value: Dining in
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423698, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_Name
-      value: ChoiceZone
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
 --- !u!1001 &1653926567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8674,3 +8536,107 @@ Transform:
   m_Father: {fileID: 968750466}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1643920787607068131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721975634817618280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a765a9a8c8ea2f4698ae2f796722eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+  choices:
+  - I brought my own container
+  - Takeaway
+  radius: 3.69
+  popupScale: {x: 0.005, y: 0.005, z: 0.005}
+  prompt: Hello, would you like a straw?
+  goodChoiceText: 'No '
+  badChoiceText: Yes
+--- !u!114 &1643920789086774714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721975636565174577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a765a9a8c8ea2f4698ae2f796722eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
+  choices:
+  - I brought my own container
+  - Takeaway
+  radius: 2.28
+  popupScale: {x: 0.005, y: 0.005, z: 0.005}
+  prompt: Did you bring a bag?
+  goodChoiceText: Yes
+  badChoiceText: No
+--- !u!1 &5721975634817618280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5721975634817618281}
+  - component: {fileID: 1643920787607068131}
+  m_Layer: 0
+  m_Name: ChoiceZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5721975634817618281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721975634817618280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.82, y: -1.125, z: 5.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &5721975636565174576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721975636565174577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.01, y: -1.02, z: 5.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5721975636565174577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5721975636565174576}
+  - component: {fileID: 1643920789086774714}
+  m_Layer: 0
+  m_Name: ChoiceZone (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
