@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class TransitionZoneBehaviour : InteractionZoneBehaviour
@@ -51,7 +52,7 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
             return;
         }
 
-        SceneManager.LoadScene(nextSceneName);
+        GameObject.FindObjectOfType<MySceneManager>().gotoScene(nextSceneName);
         // StartCoroutine(LoadNextScene());
     }
 

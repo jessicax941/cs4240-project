@@ -8,7 +8,8 @@ public class StartMenu : MonoBehaviour
     public void StartApp()
     {
         Debug.Log("Start");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        GameObject.FindObjectOfType<MySceneManager>().gotoScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void OpenSettings()
