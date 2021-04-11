@@ -8,8 +8,8 @@ public class StartMenu : MonoBehaviour
 {
     public GameObject introPanel;
     public GameObject startMenuPanel;
-    public List<string> introTitles;
-    public List<string> introTexts;
+    public string[] introTitles;
+    public string[] introTexts;
 
     private int introIndex;
     private int numIntroPanels;
@@ -20,12 +20,23 @@ public class StartMenu : MonoBehaviour
     private void Start()
     {
         introIndex = 0;
-        numIntroPanels = introTitles.Count - 1;
         introTitle = transform.Find("Intro/IntroTitle").GetComponent<Text>();
         introText = transform.Find("Intro/IntroText").GetComponent<Text>();
         nextButtonText = transform.Find("Intro/NextButton/NextText").GetComponent<Text>();
         introPanel.SetActive(false);
         startMenuPanel.SetActive(true);
+
+        numIntroPanels = 3;
+        introTitles = new string[numIntroPanels + 1];
+        introTitles[0] = "Welcome to Ecoverse!";
+        introTitles[1] = "How to play";
+        introTitles[2] = "Controls";
+        introTitles[3] = "That's all!";
+        introTexts = new string[numIntroPanels + 1];
+        introTexts[0] = "Ecoverse is a VR simulation that aims to teach you how your actions can affect the environment.";
+        introTexts[1] = "You will have to traverse a few different locations, and make choices at each location that will affect the ending you receive.";
+        introTexts[2] = "Left Hand Trackpad = Teleport\nTrigger Press (either hand) = Press button";
+        introTexts[3] = "We hope you enjoy the game!";
     }
 
     public void StartApp()
