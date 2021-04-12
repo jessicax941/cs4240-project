@@ -6298,11 +6298,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8087989627540632392, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136702980349712474, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_Text
+      value: Pork
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
@@ -8039,6 +8043,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 48517754e0e013546accce0287ea9c2f, type: 3}
   m_PrefabInstance: {fileID: 1822181613}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1029669266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029669268}
+  - component: {fileID: 1029669267}
+  m_Layer: 0
+  m_Name: ChoicesManagerTemp
+  m_TagString: ChoicesManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1029669267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029669266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ae12618d6599540a2d5f8c51cbd2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1029669268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029669266}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.31596434, y: 1.0382695, z: 0.26747274}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1034596614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 48517754e0e013546accce0287ea9c2f, type: 3}
@@ -8440,7 +8487,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136702980349712474, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_Text
+      value: Pork
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
@@ -8879,11 +8930,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8087989627540632392, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136702980349712474, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_Text
+      value: Chicken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}

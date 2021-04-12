@@ -8,8 +8,18 @@ public class ChoicesManager : MonoBehaviour
     public static ChoicesManager instance;
 
     private int score = 0;
-    private List<string> goodChoices = new List<string>();
-    private List<string> badChoices = new List<string>();
+    private List<GoodChoice> goodChoices = new List<GoodChoice>();
+    private List<BadChoice> badChoices = new List<BadChoice>();
+
+    public List<GoodChoice> GetGoodChoices()
+    {
+        return goodChoices;
+    }
+
+    public List<BadChoice> GetBadChoices()
+    {
+        return badChoices;
+    }
 
     void Awake()
     {
@@ -27,14 +37,21 @@ public class ChoicesManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void ChoseGoodChoice(string goodChoice)
+    void Start() {
+        // for testing purposes
+        goodChoices.Add(GoodChoice.Chicken);
+        badChoices.Add(BadChoice.Pork);
+
+    }
+
+    public void ChoseGoodChoice(GoodChoice goodChoice)
     {
         score++;
         goodChoices.Add(goodChoice);
         Debug.Log("Score: " + score);
     }
 
-    public void ChoseBadChoice(string badChoice)
+    public void ChoseBadChoice(BadChoice badChoice)
     {
         score--;
         badChoices.Add(badChoice);

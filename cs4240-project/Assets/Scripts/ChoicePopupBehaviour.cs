@@ -20,11 +20,11 @@ public class ChoicePopupBehaviour : MonoBehaviour
 
         Transform goodChoiceButton = popupContents.Find("GoodChoiceButton");
         goodChoiceButton.GetComponent<Button>().onClick.AddListener(() => { parentZone.ChoseGoodChoice(); });
-        goodChoiceButton.Find("Text").GetComponent<Text>().text = parentZone.goodChoiceText;
+        goodChoiceButton.Find("Text").GetComponent<Text>().text = ChoiceRepresentation.ToString(parentZone.goodChoice);
 
         Transform badChoiceButton = popupContents.Find("BadChoiceButton");
         badChoiceButton.GetComponent<Button>().onClick.AddListener(() => { parentZone.ChoseBadChoice(); });
-        badChoiceButton.Find("Text").GetComponent<Text>().text = parentZone.badChoiceText;
+        badChoiceButton.Find("Text").GetComponent<Text>().text = ChoiceRepresentation.ToString(parentZone.badChoice);
     }
 
     void LateUpdate()

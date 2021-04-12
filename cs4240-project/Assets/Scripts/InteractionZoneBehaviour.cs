@@ -4,22 +4,6 @@ using UnityEngine;
 
 public class InteractionZoneBehaviour : MonoBehaviour
 {
-    // public abstract void ChoseGoodChoice();
-    // public abstract void ChoseBadChoice();
-    // public abstract void YesPressed();
-    // public abstract void NoPressed();
-
-    // void Update()
-    // {
-    //     if (!popup && IsPlayerNearby())
-    //     {
-    //         CreatePopup();
-    //     }
-    //     else if (popup && !IsPlayerNearby())
-    //     {
-    //         DestroyPopup();
-    //     }
-    // }
 
     protected bool IsPlayerNearby(float radius)
     {

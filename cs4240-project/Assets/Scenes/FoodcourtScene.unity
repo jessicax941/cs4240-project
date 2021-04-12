@@ -747,8 +747,8 @@ MonoBehaviour:
   radius: 6
   popupScale: {x: 0.01, y: 0.01, z: 0.01}
   prompt: Takeaway or dining in?
-  goodChoiceText: Dining in
-  badChoiceText: Takeaway
+  goodChoice: 0
+  badChoice: 1
 --- !u!1001 &170200946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6651,8 +6651,8 @@ MonoBehaviour:
   radius: 6
   popupScale: {x: 0.01, y: 0.01, z: 0.01}
   prompt: Takeaway or dining in?
-  goodChoiceText: Dining in
-  badChoiceText: Takeaway
+  goodChoice: 0
+  badChoice: 1
 --- !u!1001 &1653926567
 PrefabInstance:
   m_ObjectHideFlags: 0
