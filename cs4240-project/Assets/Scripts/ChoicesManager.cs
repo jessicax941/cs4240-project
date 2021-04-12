@@ -40,6 +40,7 @@ public class ChoicesManager : MonoBehaviour
     void Start() {
         // for testing purposes
         goodChoices.Add(GoodChoice.Chicken);
+        goodChoices.Add(GoodChoice.DineIn);
         badChoices.Add(BadChoice.Takeaway);
         badChoices.Add(BadChoice.Pork);
 
