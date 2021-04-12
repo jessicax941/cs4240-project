@@ -8,6 +8,8 @@ public class ChoicesManager : MonoBehaviour
     public static ChoicesManager instance;
 
     private int score = 0;
+    private List<string> goodChoices = new List<string>();
+    private List<string> badChoices = new List<string>();
 
     void Awake()
     {
@@ -25,15 +27,17 @@ public class ChoicesManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void IncrementScore()
+    public void ChoseGoodChoice(string goodChoice)
     {
         score++;
+        goodChoices.Add(goodChoice);
         Debug.Log("Score: " + score);
     }
 
-    public void DecrementScore()
+    public void ChoseBadChoice(string badChoice)
     {
         score--;
+        badChoices.Add(badChoice);
         Debug.Log("Score: " + score);
     }
 
@@ -47,17 +51,5 @@ public class ChoicesManager : MonoBehaviour
         {
             return "EvaluationScene_Bad";
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

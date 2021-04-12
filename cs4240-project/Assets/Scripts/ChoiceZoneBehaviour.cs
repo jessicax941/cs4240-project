@@ -41,7 +41,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (choicesManager)
         {
-            choicesManager.GetComponent<ChoicesManager>().IncrementScore();
+            choicesManager.GetComponent<ChoicesManager>().ChoseGoodChoice(goodChoiceText);
         }
         else
         {
@@ -53,7 +53,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (choicesManager)
         {
-            choicesManager.GetComponent<ChoicesManager>().DecrementScore();
+            choicesManager.GetComponent<ChoicesManager>().ChoseBadChoice(badChoiceText);
         }
         else
         {
