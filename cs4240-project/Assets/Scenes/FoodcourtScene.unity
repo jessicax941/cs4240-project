@@ -678,21 +678,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChoiceZone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5721975636434423698, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.83
+      value: 2.06
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.19
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.72
+      value: 6.08
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalRotation.w
@@ -745,7 +749,7 @@ MonoBehaviour:
   popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
   choices: []
   radius: 6
-  popupScale: {x: 0.01, y: 0.01, z: 0.01}
+  popupScale: {x: 0.005, y: 0.005, z: 0.005}
   prompt: Takeaway or dining in?
   goodChoice: 1
   badChoice: 1
@@ -1788,7 +1792,7 @@ Transform:
   m_GameObject: {fileID: 441663639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.8013117, y: 3.8892815, z: -2.2805796}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1917160568}
   - {fileID: 1855614177}
@@ -1810,7 +1814,7 @@ Transform:
   - {fileID: 453588954}
   - {fileID: 1844384621}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453588953
 GameObject:
@@ -5237,19 +5241,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.215
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.23
+      value: -1.26
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5291,6 +5295,18 @@ PrefabInstance:
       propertyPath: popupCanvas
       value: 
       objectReference: {fileID: 6762721848806597837, guid: 1db189e6d444dc14fa180d20e0f51974, type: 3}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.y
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: popupScale.z
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: nextSceneName
       value: Supermarket
@@ -5923,7 +5939,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533278774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.74, y: -3.82, z: 7.44}
+  m_LocalPosition: {x: 0.31, y: -1.02, z: 3.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 904593447}
@@ -6588,15 +6604,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.54
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.19
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14
+      value: 6.61
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6649,7 +6665,7 @@ MonoBehaviour:
   popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
   choices: []
   radius: 6
-  popupScale: {x: 0.01, y: 0.01, z: 0.01}
+  popupScale: {x: 0.005, y: 0.005, z: 0.005}
   prompt: Takeaway or dining in?
   goodChoice: 1
   badChoice: 1
@@ -7186,7 +7202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 352342812223865253, guid: 571698a34492374419b647a044f7f8c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14
+      value: 10.48
       objectReference: {fileID: 0}
     - target: {fileID: 352342812223865253, guid: 571698a34492374419b647a044f7f8c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7206,11 +7222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 352342812223865253, guid: 571698a34492374419b647a044f7f8c1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 4.74
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 352342812223865253, guid: 571698a34492374419b647a044f7f8c1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.82
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 352342812223865253, guid: 571698a34492374419b647a044f7f8c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
