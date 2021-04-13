@@ -5,10 +5,8 @@ using UnityEngine.UI;
 
 public class EvaluationPopupManager : MonoBehaviour
 {
-    public GameObject evaluationPopup;
 
     private List<GameObject> popups = new List<GameObject>(); // all disabled by default
-
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +21,11 @@ public class EvaluationPopupManager : MonoBehaviour
         // enable popups to appear in scene based on good and bad choices made by player
         GameObject choicesManagerGO = GameObject.FindWithTag("ChoicesManager");
         if (choicesManagerGO) {
+            Debug.Log("found cm");
             ChoicesManager cm = choicesManagerGO.GetComponent<ChoicesManager>();
             List<GoodChoice> goodChoices = cm.GetGoodChoices();
             List<BadChoice> badChoices = cm.GetBadChoices();
-            
+
             EnablePopups(goodChoices);            
             EnablePopups(badChoices);
         }
@@ -37,6 +36,7 @@ public class EvaluationPopupManager : MonoBehaviour
         foreach (GoodChoice choice in goodChoices)
         {
             string choiceString = ChoiceRepresentation.ToString(choice);
+            Debug.Log("good choice: " + choiceString);
             EnablePopup(choiceString);
         }
     }
@@ -46,6 +46,7 @@ public class EvaluationPopupManager : MonoBehaviour
         foreach (BadChoice choice in badChoices)
         {
             string choiceString = ChoiceRepresentation.ToString(choice);
+            Debug.Log("bad choice: " + choiceString);
             EnablePopup(choiceString);
         }
     }
@@ -55,11 +56,13 @@ public class EvaluationPopupManager : MonoBehaviour
         GameObject respectivePopup = popups.Find(popup => popup.GetComponent<EvaluationPopup>().GetTitle().Equals(choice));
         if (respectivePopup)
         {
+            // Debug.Log("found popup: " + respectivePopup.GetComponent<EvaluationPopup>().GetTitle());
             respectivePopup.SetActive(true);
+            respectivePopup.GetComponent<EvaluationPopup>().ShowExtraObjectIfAny();
         } 
         else
         {
-            Debug.Log("did not find popup");
+            Debug.Log("did not find popup for " + choice);
         }
     }
 }

@@ -23,6 +23,12 @@ public class ChoicesManager : MonoBehaviour
 
     void Awake()
     {
+        // for testing purposes
+        goodChoices.Add(GoodChoice.Chicken);
+        goodChoices.Add(GoodChoice.DineIn);
+        // badChoices.Add(BadChoice.Takeaway);
+        // badChoices.Add(BadChoice.Pork);
+
         // Ensure only one instance of ChoicesManager
         if (instance == null)
         {
@@ -38,11 +44,7 @@ public class ChoicesManager : MonoBehaviour
     }
 
     void Start() {
-        // for testing purposes
-        goodChoices.Add(GoodChoice.Chicken);
-        goodChoices.Add(GoodChoice.DineIn);
-        badChoices.Add(BadChoice.Takeaway);
-        badChoices.Add(BadChoice.Pork);
+        
 
     }
 
