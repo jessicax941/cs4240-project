@@ -18,10 +18,20 @@ public class EndingPrompt : MonoBehaviour
         if ((Camera.main.transform.position - transform.position).magnitude < radius)
         {
             prompt.SetActive(true);
+            PlaySound();
         }
         else
         {
             prompt.SetActive(false);
+        }
+    }
+    void PlaySound()
+    {
+        AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+        if (audioSource)
+        {
+            Debug.Log("playing sound");
+            audioSource.Play();
         }
     }
 

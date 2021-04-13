@@ -41,6 +41,7 @@ public class EvaluationPopup : MonoBehaviour
         if (!contents.activeSelf && IsPlayerNearby(radius))
         {
             contents.SetActive(true);
+            PlaySound();
         }
         else if (contents.activeSelf && !IsPlayerNearby(radius))
         {
@@ -48,14 +49,25 @@ public class EvaluationPopup : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void PlaySound()
     {
-        transform.LookAt(2 * transform.position - Camera.main.transform.position, Vector3.up);
+        AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+        if (audioSource)
+        {
+            audioSource.Play();
+        }
     }
 
     bool IsPlayerNearby(float radius)
     {
         return ((transform.position - Camera.main.transform.position).magnitude < radius);
     }
+
+    void LateUpdate()
+    {
+        transform.LookAt(2 * transform.position - Camera.main.transform.position, Vector3.up);
+    }
+
+    
 
 }

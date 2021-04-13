@@ -9,8 +9,6 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     public float radius;
     public Vector3 popupScale;
     public string prompt;
-    // public string goodChoiceText;
-    // public string badChoiceText;
     public GoodChoice goodChoice;
     public BadChoice badChoice;
 
@@ -23,7 +21,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         numChoices = choices.Count - 1;
         // currChoice = 0;
-        choicesManager = GameObject.Find("ChoicesManager");
+        choicesManager = GameObject.FindWithTag("ChoicesManager");
     }
 
     void Update()

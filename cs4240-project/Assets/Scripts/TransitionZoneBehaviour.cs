@@ -19,7 +19,7 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
 
     void Start()
     {
-        choicesManager = GameObject.Find("ChoicesManager");
+        choicesManager = GameObject.FindWithTag("ChoicesManager");
         // selfZoneBehaviour = gameObject.GetComponent<TransitionZoneBehaviour>();
     }
 
@@ -28,6 +28,7 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
         if (!popupObject && base.IsPlayerNearby(radius))
         {
             popupObject = base.CreatePopup(popupCanvas, popupScale, this, prompt);
+            PlayPopupSound();
         }
         else if (popupObject && !base.IsPlayerNearby(radius))
         {
@@ -65,6 +66,16 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
             {
                 yield return null;
             }
+        }
+    }
+
+    private void PlayPopupSound()
+    {
+        AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+        if (audioSource)
+        {
+            Debug.Log("playing sound");
+            audioSource.Play();
         }
     }
 

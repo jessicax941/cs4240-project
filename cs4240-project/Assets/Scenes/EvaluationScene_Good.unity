@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7295859348495957113, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Name
       value: EvaluationPopup_Chicken
@@ -467,7 +471,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2bb03b1f80f50e04388710ae901ae607, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0

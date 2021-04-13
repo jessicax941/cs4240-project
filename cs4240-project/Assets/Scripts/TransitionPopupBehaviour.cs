@@ -25,9 +25,5 @@ public class TransitionPopupBehaviour : MonoBehaviour
     {
         transform.LookAt(2 * transform.position - Camera.main.transform.position, Vector3.up);
     }
-
-    // public void UpdateText(string newText)
-    // {
-    //     text.text = newText;
-    // }
+    
 }
