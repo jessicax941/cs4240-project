@@ -9,8 +9,8 @@ public class StartMenu : MonoBehaviour
 
     public GameObject introPanel;
     public GameObject startMenuPanel;
-    public string[] introTitles;
-    public string[] introTexts;
+    private string[] introTitles;
+    private string[] introTexts;
 
     private int introIndex;
     private int numIntroPanels;
@@ -26,6 +26,7 @@ public class StartMenu : MonoBehaviour
         nextButtonText = transform.Find("Intro/NextButton/NextText").GetComponent<Text>();
         introPanel.SetActive(false);
         startMenuPanel.SetActive(true);
+        Debug.Log(startMenuPanel.GetComponent<Image>().color.ToString());
 
         numIntroPanels = 3;
         introTitles = new string[numIntroPanels + 1];

@@ -3504,6 +3504,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 102375652, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 102375654, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 525155836, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b9ebe7556941133428371eebe861fdcf, type: 3}
+    - target: {fileID: 983588799, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 983588799, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -48.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 983588800, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b9ebe7556941133428371eebe861fdcf, type: 3}
+    - target: {fileID: 983588800, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 983588800, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895049196, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b9ebe7556941133428371eebe861fdcf, type: 3}
+    - target: {fileID: 2053604977, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: b9ebe7556941133428371eebe861fdcf, type: 3}
+    - target: {fileID: 2053604977, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 515787324044268060, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartApp
@@ -3512,9 +3556,37 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: StartMenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 515787324944466456, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515787324944466458, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_Color.a
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 515787324944466458, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515787324944466458, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515787324944466458, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515787324944466458, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3151177905141508868, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
       propertyPath: m_Name
       value: StartMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151177905141508868, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3151177905141508870, guid: 4e6aab5a68b76314baa815ad93dfda5c, type: 3}
       propertyPath: m_PresetInfoIsWorld

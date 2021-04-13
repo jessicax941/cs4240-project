@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23861a21e1d28a84798d31a40cc269a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introPanel: {fileID: 0}
+  startMenuPanel: {fileID: 0}
 --- !u!1001 &1849701860597508499
 PrefabInstance:
   m_ObjectHideFlags: 0
