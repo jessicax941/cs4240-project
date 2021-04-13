@@ -24,19 +24,21 @@ public class RightHandController : MonoBehaviour
     {
         if (!grabbing && ViveInput.GetAxis(HandRole.RightHand, ControllerAxis.Trigger) == 1f)
         {
+            
             GrabObject();
         }
 
         if (grabbing && ViveInput.GetPressDown(HandRole.RightHand, ControllerButton.Grip))
         {
+            Debug.Log("not grabbing");
             DropObject();
         }
     }
 
-    public GameObject GetGrabbedObject()
-    {
-        return grabbedObject;
-    }
+    // public GameObject GetGrabbedObject()
+    // {
+    //     return grabbedObject;
+    // }
 
     void GrabObject()
     {
@@ -46,6 +48,7 @@ public class RightHandController : MonoBehaviour
 
         if (hits.Length > 0)
         {
+            Debug.Log("grabbing");
             // there is something within range to grab
             grabbing = true;
 
@@ -61,11 +64,13 @@ public class RightHandController : MonoBehaviour
             }
 
             grabbedObject = hits[closestHit].transform.gameObject;
+            Debug.Log("grabbing " + grabbedObject.name);
             grabbedObject.GetComponent<Rigidbody>().isKinematic = true; // grabbedObject is not affected by gravity
             grabbedObject.transform.position = transform.position + transform.forward.normalized; // grabbedObject will be set at the offset
             grabbedObject.transform.rotation = transform.rotation; // set rotation of object to the parent's rotation
             grabbedObject.transform.parent = transform; // grabbedObject set as child of the controller so will move together
             grabbedObject.GetComponent<GrabbableBehaviour>().grabbed = true;
+
         }
     }
 

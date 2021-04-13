@@ -30,7 +30,7 @@ public class EndingPrompt : MonoBehaviour
         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
         if (audioSource)
         {
-            Debug.Log("playing sound");
+            // Debug.Log("playing sound");
             audioSource.Play();
         }
     }

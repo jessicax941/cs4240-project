@@ -22,6 +22,9 @@ public class ChoicesManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("awake");
+        Debug.Log("goodChoices: " + goodChoices.Count);
+        Debug.Log("badChoices: " + badChoices.Count);
         // for testing purposes
         goodChoices.Add(GoodChoice.Chicken);
         goodChoices.Add(GoodChoice.DineIn);
