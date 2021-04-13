@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
+
     public GameObject introPanel;
     public GameObject startMenuPanel;
     public string[] introTitles;

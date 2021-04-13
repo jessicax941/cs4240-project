@@ -8,6 +8,18 @@ public class ChoicesManager : MonoBehaviour
     public static ChoicesManager instance;
 
     private int score = 0;
+    private List<GoodChoice> goodChoices = new List<GoodChoice>();
+    private List<BadChoice> badChoices = new List<BadChoice>();
+
+    public List<GoodChoice> GetGoodChoices()
+    {
+        return goodChoices;
+    }
+
+    public List<BadChoice> GetBadChoices()
+    {
+        return badChoices;
+    }
 
     void Awake()
     {
@@ -25,15 +37,24 @@ public class ChoicesManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void IncrementScore()
+    void Start() {
+        // for testing purposes
+        goodChoices.Add(GoodChoice.Chicken);
+        badChoices.Add(BadChoice.Pork);
+
+    }
+
+    public void ChoseGoodChoice(GoodChoice goodChoice)
     {
         score++;
+        goodChoices.Add(goodChoice);
         Debug.Log("Score: " + score);
     }
 
-    public void DecrementScore()
+    public void ChoseBadChoice(BadChoice badChoice)
     {
         score--;
+        badChoices.Add(badChoice);
         Debug.Log("Score: " + score);
     }
 
@@ -47,17 +68,5 @@ public class ChoicesManager : MonoBehaviour
         {
             return "EvaluationScene_Bad";
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
