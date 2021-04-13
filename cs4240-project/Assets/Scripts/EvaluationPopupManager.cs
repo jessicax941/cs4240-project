@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EvaluationPopupManager : MonoBehaviour
 {
-
+    public List<GameObject> alwaysEnable = new List<GameObject>(); 
     private List<GameObject> popups = new List<GameObject>(); // all disabled by default
 
     // Start is called before the first frame update
     void Start()
     {
         // get all the child popup GOs
-        foreach (Transform child in transform) {
-            popups.Add(child.gameObject);
-            child.gameObject.SetActive(false);
-            Debug.Log("popup: " + child.GetComponent<EvaluationPopup>().GetTitle());
+        foreach (Transform child in transform)
+        {
+            GameObject popup = child.gameObject;
+            if (alwaysEnable.Contains(popup))
+            {
+                popup.SetActive(true);
+            }
+            else
+            {
+                popups.Add(popup);
+                popup.SetActive(false);
+                Debug.Log("popup: " + child.GetComponent<EvaluationPopup>().GetTitle());
+            }
         }
 
         // enable popups to appear in scene based on good and bad choices made by player
@@ -58,7 +66,7 @@ public class EvaluationPopupManager : MonoBehaviour
         {
             // Debug.Log("found popup: " + respectivePopup.GetComponent<EvaluationPopup>().GetTitle());
             respectivePopup.SetActive(true);
-            respectivePopup.GetComponent<EvaluationPopup>().ShowExtraObjectIfAny();
+            respectivePopup.GetComponent<EvaluationPopup>().SpawnExtraObjectIfAny();
         } 
         else
         {

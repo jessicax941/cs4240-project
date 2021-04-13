@@ -7,7 +7,6 @@ public class ChoicesManager : MonoBehaviour
 
     public static ChoicesManager instance;
 
-    private int score = 0;
     private List<GoodChoice> goodChoices = new List<GoodChoice>();
     private List<BadChoice> badChoices = new List<BadChoice>();
 
@@ -44,27 +43,22 @@ public class ChoicesManager : MonoBehaviour
     }
 
     void Start() {
-        
 
     }
 
     public void ChoseGoodChoice(GoodChoice goodChoice)
     {
-        score++;
         goodChoices.Add(goodChoice);
-        Debug.Log("Score: " + score);
     }
 
     public void ChoseBadChoice(BadChoice badChoice)
     {
-        score--;
         badChoices.Add(badChoice);
-        Debug.Log("Score: " + score);
     }
 
     public string GetFinalSceneName()
     {
-        if (score >= 0)
+        if (goodChoices.Count > badChoices.Count)
         {
             return "EvaluationScene_Good";
         }

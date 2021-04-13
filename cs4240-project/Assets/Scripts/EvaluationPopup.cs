@@ -19,23 +19,15 @@ public class EvaluationPopup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (objectToSpawn)
-        {
-            objectToSpawn.SetActive(false);   
-        }
+
     }
 
-    public void ShowExtraObjectIfAny()
+    public void SpawnExtraObjectIfAny()
     {
-        if (objectToSpawn)
-        {
-            objectToSpawn.SetActive(true);
-        }
         // for more dynamic scenes
         if (objectToSpawn && !spawnedObject)
         {
             // only spawn object if there is an object to spawn and if it has not been spawned yet
-            // Vector3 objectPosition = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
             spawnedObject = Instantiate(objectToSpawn, new Vector3(transform.position.x, Yposition, transform.position.z), Quaternion.identity, transform.parent);
             if (spawnedObject) {
                 spawnedObject.transform.Rotate(rotation, Space.World);
