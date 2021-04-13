@@ -22,13 +22,13 @@ public class EvaluationPopupManager : MonoBehaviour
             {
                 popups.Add(popup);
                 popup.SetActive(false);
-                Debug.Log("popup: " + child.GetComponent<EvaluationPopup>().GetTitle());
             }
         }
 
         // enable popups to appear in scene based on good and bad choices made by player
         GameObject choicesManagerGO = GameObject.FindWithTag("ChoicesManager");
-        if (choicesManagerGO) {
+        if (choicesManagerGO)
+        {
             Debug.Log("found cm");
             ChoicesManager cm = choicesManagerGO.GetComponent<ChoicesManager>();
             List<GoodChoice> goodChoices = cm.GetGoodChoices();
@@ -59,9 +59,10 @@ public class EvaluationPopupManager : MonoBehaviour
         }
     }
 
-    private void EnablePopup(string choice)
+    private void EnablePopup(string choiceString)
     {
-        GameObject respectivePopup = popups.Find(popup => popup.GetComponent<EvaluationPopup>().GetTitle().Equals(choice));
+        choiceString = choiceString.Replace(" ", string.Empty);
+        GameObject respectivePopup = popups.Find(popup => popup.name.Contains(choiceString));
         if (respectivePopup)
         {
             // Debug.Log("found popup: " + respectivePopup.GetComponent<EvaluationPopup>().GetTitle());
@@ -70,7 +71,7 @@ public class EvaluationPopupManager : MonoBehaviour
         } 
         else
         {
-            Debug.Log("did not find popup for " + choice);
+            Debug.Log("did not find popup for " + choiceString);
         }
     }
 }

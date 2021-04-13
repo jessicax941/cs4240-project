@@ -25,8 +25,8 @@ public class ChoicesManager : MonoBehaviour
         // for testing purposes
         goodChoices.Add(GoodChoice.Chicken);
         goodChoices.Add(GoodChoice.DineIn);
-        // badChoices.Add(BadChoice.Takeaway);
-        // badChoices.Add(BadChoice.Pork);
+        badChoices.Add(BadChoice.Takeaway);
+        badChoices.Add(BadChoice.Pork);
 
         // Ensure only one instance of ChoicesManager
         if (instance == null)

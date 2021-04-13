@@ -6265,7 +6265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.83
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6301,17 +6301,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136702980349712474, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
-      value: Pork
+      value: Climate-unfriendly diets
       objectReference: {fileID: 0}
     - target: {fileID: 8722360535718967851, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
-      value: 'Look at what you''ve done... all this CO2... and the rising sea levels!
+      value: 'Look at what you''ve done... all this CO2...
 
-        Pork
-        has a greater impact on the climate than chicken as it is less efficient
-        in converting grains into meat protein, and thus more land, fertilizer and
-        energy is needed to farm pork. If you don''t want your world to end up this
-        way... you know what to do.'
+        Pork has a greater
+        impact on the climate than chicken as it is less efficient in converting
+        grains into meat protein, and thus more land, fertilizer and energy is needed
+        to farm pork. If you don''t want your world to end up this way... you know
+        what to do.'
       objectReference: {fileID: 0}
     - target: {fileID: 8722360535718967851, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -8080,7 +8080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1029669267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8460,7 +8460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.535
+      value: -2.283
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8480,7 +8480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.449
+      value: -1.504
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8512,14 +8512,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136702980349712474, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
-      value: Takeaway
+      value: Plastic kills
       objectReference: {fileID: 0}
     - target: {fileID: 8722360535718967851, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
       value: "See the dead animals around?\nSinge-use plastics can be ingested by
         many birds and marine animals, thinking that it's food. This potentially
-        kills them or leaves them with chronic hunger and suffering. \nBetter think
-        twice the next time you order takeaway..."
+        kills them or leaves them with chronic hunger and suffering. \nThe next time
+        you order takeaway, remember to bring along reusable containers and cutlery!
+        #saveouranimals"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
@@ -10025,7 +10026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.535
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10045,7 +10046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.89
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_AnchoredPosition.y

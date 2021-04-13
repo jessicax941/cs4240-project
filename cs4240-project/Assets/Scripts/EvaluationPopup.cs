@@ -7,7 +7,6 @@ public class EvaluationPopup : MonoBehaviour
 {
     public float radius = 2f;
     public GameObject contents;
-    public Text title;
 
     [Header("Extra Object to Spawn (optional)")]
     public GameObject objectToSpawn;
@@ -41,12 +40,10 @@ public class EvaluationPopup : MonoBehaviour
     {
         if (!contents.activeSelf && IsPlayerNearby(radius))
         {
-            Debug.Log("enabling " + title.text);
             contents.SetActive(true);
         }
         else if (contents.activeSelf && !IsPlayerNearby(radius))
         {
-            Debug.Log("disabling " + title.text);
             contents.SetActive(false);
         }
     }
@@ -59,11 +56,6 @@ public class EvaluationPopup : MonoBehaviour
     bool IsPlayerNearby(float radius)
     {
         return ((transform.position - Camera.main.transform.position).magnitude < radius);
-    }
-
-    public string GetTitle()
-    {
-        return title.text;
     }
 
 }

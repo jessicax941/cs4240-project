@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136702980349712474, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
-      value: Chicken
+      value: Climate-friendly diets
       objectReference: {fileID: 0}
     - target: {fileID: 8722360535718967851, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
@@ -1425,6 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54852c89e3b35104e908072194c9431e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alwaysEnable: []
 --- !u!4 &460660093
 Transform:
   m_ObjectHideFlags: 0
@@ -3942,12 +3943,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136702980349712474, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
-      value: Dine In
+      value: '#saveouranimals'
       objectReference: {fileID: 0}
     - target: {fileID: 8722360535718967851, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
       value: Excellent! Dine in more to reduce your use of disposable plastics and
-        save our animals from dying to plastics!
+        #saveouranimals from dying to plastics!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
@@ -5005,7 +5006,7 @@ PrefabInstance:
       objectReference: {fileID: 78336662}
     - target: {fileID: 8136702980349712474, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
-      value: Takeaway
+      value: Plastic kills
       objectReference: {fileID: 0}
     - target: {fileID: 8722360535718967851, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Text
