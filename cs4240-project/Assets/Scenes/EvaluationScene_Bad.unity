@@ -15,21 +15,21 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.8584906, g: 0.38470095, b: 0.38470095, a: 1}
+  m_FogColor: {r: 0.5, g: 0.46415094, b: 0.46415094, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.35889995, g: 0.36190814, b: 0.3679245, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.9607843, g: 0.6050469, b: 0.5686275, a: 1}
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.6415094, g: 0.63269776, b: 0.6318263, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: f855134cdd14ab54fa2838027b3eec2f, type: 2}
   m_HaloStrength: 0.5
-  m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
+  m_FlareStrength: 0
+  m_FlareFadeSpeed: 0
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
@@ -5333,6 +5333,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2071970, guid: cb3370c18187bb444b240cfb08dcc02f, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071970, guid: cb3370c18187bb444b240cfb08dcc02f, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.5849056
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071970, guid: cb3370c18187bb444b240cfb08dcc02f, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.5849056
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071970, guid: cb3370c18187bb444b240cfb08dcc02f, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.5849056
+      objectReference: {fileID: 0}
+    - target: {fileID: 12406598, guid: cb3370c18187bb444b240cfb08dcc02f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb3370c18187bb444b240cfb08dcc02f, type: 3}
 --- !u!4 &164280788 stripped
@@ -7438,11 +7458,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4e70f10d5ae9643878997861cd8b80, type: 3}
---- !u!1 &822554067 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
-  m_PrefabInstance: {fileID: 1611944335}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &822554068 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7295859348495957111, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
@@ -7604,7 +7619,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836450206}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 2.070981, y: 1.8473413, z: -2.57442}
+  m_LocalPosition: {x: 0.45, y: 4.56, z: 0.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9486,8 +9501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54852c89e3b35104e908072194c9431e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alwaysEnable:
-  - {fileID: 822554067}
+  hasExtras: []
 --- !u!4 &1327728569
 Transform:
   m_ObjectHideFlags: 0
