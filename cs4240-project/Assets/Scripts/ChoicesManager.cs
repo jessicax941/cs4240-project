@@ -53,11 +53,22 @@ public class ChoicesManager : MonoBehaviour
     public void ChoseGoodChoice(GoodChoice goodChoice)
     {
         goodChoices.Add(goodChoice);
+        HandleSpecialCase();
     }
 
     public void ChoseBadChoice(BadChoice badChoice)
     {
         badChoices.Add(badChoice);
+        HandleSpecialCase();
+    }
+
+    private void HandleSpecialCase()
+    {
+        // special case of chose takeaway but do not need cutlery
+        if (badChoices.Contains(BadChoice.Takeaway) && goodChoices.Contains(GoodChoice.NoUtensils))
+        {
+            badChoices.RemoveAll(choice => choice.Equals(BadChoice.Takeaway));
+        }
     }
 
     public string GetFinalSceneName()

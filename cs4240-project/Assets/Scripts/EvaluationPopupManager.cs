@@ -42,11 +42,21 @@ public class EvaluationPopupManager : MonoBehaviour
             List<GoodChoice> goodChoices = cm.GetGoodChoices();
             List<BadChoice> badChoices = cm.GetBadChoices();
 
+            // HandleSpecialCase(goodChoices, badChoices);
+
             EnablePopups(goodChoices);            
             EnablePopups(badChoices);
         }
     }
 
+    // private void HandleSpecialCase(List<GoodChoice> goodChoices, List<BadChoice> badChoices)
+    // {
+    //     // special case of chose takeaway but do not need cutlery
+    //     if (badChoices.Contains(BadChoice.Takeaway) && goodChoices.Contains(GoodChoice.NoUtensils)
+    //     {
+    //         badChoices.Remove(BadChoice.Takeaway);
+    //     }
+    // }
     private void EnablePopups(List<GoodChoice> goodChoices)
     {
         foreach (GoodChoice choice in goodChoices)
@@ -54,6 +64,21 @@ public class EvaluationPopupManager : MonoBehaviour
             string choiceString = ChoiceRepresentation.ToString(choice);
             Debug.Log("good choice: " + choiceString);
             EnablePopup(choiceString);
+        }
+
+        if (goodChoices.Contains(GoodChoice.NoUtensils))
+        {
+            GameObject respectivePopup = popups.Find(popup => popup.name.Contains("DineIn"));
+            if (respectivePopup)
+            {
+                // Debug.Log("found popup: " + respectivePopup.GetComponent<EvaluationPopup>().GetTitle());
+                respectivePopup.SetActive(true);
+                // respectivePopup.GetComponent<EvaluationPopup>().SpawnExtraObjectIfAny();
+            } 
+            else
+            {
+                // Debug.Log("did not find popup for " + choiceString);
+            }
         }
     }
 
@@ -70,6 +95,7 @@ public class EvaluationPopupManager : MonoBehaviour
     private void EnablePopup(string choiceString)
     {
         choiceString = choiceString.Replace(" ", string.Empty);
+        
         GameObject respectivePopup = popups.Find(popup => popup.name.Contains(choiceString));
         if (respectivePopup)
         {
