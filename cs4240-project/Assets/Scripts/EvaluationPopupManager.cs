@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EvaluationPopupManager : MonoBehaviour
 {
-    public List<GameObject> alwaysEnable = new List<GameObject>(); 
-    private List<GameObject> popups = new List<GameObject>(); // all disabled by default
+    public List<GameObject> hasExtras = new List<GameObject>();
+
+    // public List<GameObject> alwaysEnable = new List<GameObject>(); 
+    private List<GameObject> popups = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -14,15 +16,21 @@ public class EvaluationPopupManager : MonoBehaviour
         foreach (Transform child in transform)
         {
             GameObject popup = child.gameObject;
-            if (alwaysEnable.Contains(popup))
-            {
-                popup.SetActive(true);
-            }
+            popups.Add(popup);
+
+            // if (alwaysEnable.Contains(popup))
+            // {
+            //     popup.SetActive(true);
+            // }
             // else
             // {
-            //     popups.Add(popup);
             //     popup.SetActive(false);
             // }
+        }
+
+        foreach (GameObject popupWithExtra in hasExtras)
+        {
+            popupWithExtra.SetActive(false);
         }
 
         // enable popups to appear in scene based on good and bad choices made by player

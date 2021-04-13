@@ -327,7 +327,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636301348585071506, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636301348585071506, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 7753829833462556330, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: radius
@@ -4007,7 +4015,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636301348585071506, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 7753829833462556330, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: radius
@@ -5040,13 +5052,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7295859348495957113, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_Name
       value: EvaluationPopup_Takeaway
       objectReference: {fileID: 0}
     - target: {fileID: 7295859348495957115, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636301348585071506, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636301348585071506, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 7753829833462556330, guid: 6d953c5801026cc44a7f33efdbbb7c14, type: 3}
       propertyPath: radius
@@ -5753,7 +5777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2043430172
 MonoBehaviour:
   m_ObjectHideFlags: 0
