@@ -129,7 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 2.5
   contents: {fileID: 8087989627540632392}
-  title: {fileID: 8136702980349712474}
+  objectToSpawn: {fileID: 0}
+  Yposition: 0
+  rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &8087989627540632392
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -333,17 +335,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2418071822589550697, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}
   m_PrefabInstance: {fileID: 5865331322109540400}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8136702980349712474 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2418071822589550698, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}
-  m_PrefabInstance: {fileID: 5865331322109540400}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6377865851852216897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -452,12 +443,28 @@ PrefabInstance:
       value: Some text here
       objectReference: {fileID: 0}
     - target: {fileID: 2418071822589550698, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418071822589550698, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418071822589550698, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418071822589550698, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2418071822589550698, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418071822589550698, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d31d41f6176f5494ca5fa9a999e237d1, type: 3}

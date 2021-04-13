@@ -26,7 +26,6 @@ public class StartMenu : MonoBehaviour
         nextButtonText = transform.Find("Intro/NextButton/NextText").GetComponent<Text>();
         introPanel.SetActive(false);
         startMenuPanel.SetActive(true);
-        Debug.Log(startMenuPanel.GetComponent<Image>().color.ToString());
 
         numIntroPanels = 3;
         introTitles = new string[numIntroPanels + 1];
