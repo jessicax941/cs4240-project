@@ -16,13 +16,13 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
 
     private GameObject choicesManager;
     private int numChoices;
-    private int currChoice;
+    // private int currChoice;
     private GameObject popupObject;
 
     void Start()
     {
         numChoices = choices.Count - 1;
-        currChoice = 0;
+        // currChoice = 0;
         choicesManager = GameObject.Find("ChoicesManager");
     }
 

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &102375653
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1397,12 +1397,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introPanel: {fileID: 102375652}
   startMenuPanel: {fileID: 515787324944466456}
-  introTitles:
-  - Welcome to Ecoverse!
-  - Controls
-  introTexts:
-  - baa
-  - 
 --- !u!1001 &9148239457234207554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1536,11 +1530,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8781283184602939737, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -926
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8781283184602939737, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -570
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8781283184602939737, guid: 5e1186296f7b1b64592efe1b1132411f, type: 3}
       propertyPath: m_LocalScale.x

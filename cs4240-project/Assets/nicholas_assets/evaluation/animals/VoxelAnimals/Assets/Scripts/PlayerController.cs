@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        ControllPlayer();
+        // ControllPlayer();
     }
 
     void ControllPlayer()

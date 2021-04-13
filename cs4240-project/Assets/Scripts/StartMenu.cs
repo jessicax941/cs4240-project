@@ -9,8 +9,8 @@ public class StartMenu : MonoBehaviour
 
     public GameObject introPanel;
     public GameObject startMenuPanel;
-    public string[] introTitles;
-    public string[] introTexts;
+    private string[] introTitles;
+    private string[] introTexts;
 
     private int introIndex;
     private int numIntroPanels;

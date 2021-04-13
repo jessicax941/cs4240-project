@@ -747,7 +747,7 @@ MonoBehaviour:
   radius: 6
   popupScale: {x: 0.01, y: 0.01, z: 0.01}
   prompt: Takeaway or dining in?
-  goodChoice: 0
+  goodChoice: 1
   badChoice: 1
 --- !u!1001 &170200946
 PrefabInstance:
@@ -6651,7 +6651,7 @@ MonoBehaviour:
   radius: 6
   popupScale: {x: 0.01, y: 0.01, z: 0.01}
   prompt: Takeaway or dining in?
-  goodChoice: 0
+  goodChoice: 1
   badChoice: 1
 --- !u!1001 &1653926567
 PrefabInstance:
