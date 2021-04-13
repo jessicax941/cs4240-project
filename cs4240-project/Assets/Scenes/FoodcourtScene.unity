@@ -680,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423698, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_RootOrder
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
   choices: []
-  radius: 6
+  radius: 4
   popupScale: {x: 0.005, y: 0.005, z: 0.005}
   prompt: Takeaway or dining in?
   goodChoice: 1
@@ -6664,7 +6664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
   choices: []
-  radius: 6
+  radius: 4
   popupScale: {x: 0.005, y: 0.005, z: 0.005}
   prompt: Takeaway or dining in?
   goodChoice: 1

@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb3df65fd49fc4488314b3b3f7153ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupPrefab: {fileID: 0}
-  text: 
+  popupCanvas: {fileID: 6762721848806597837, guid: 1db189e6d444dc14fa180d20e0f51974, type: 3}
+  prompt: 
   radius: 6
   popupScale: {x: 0.01, y: 0.01, z: 0.01}
-  newSceneIndex: 0
+  isLastScene: 0
+  nextSceneName: 
