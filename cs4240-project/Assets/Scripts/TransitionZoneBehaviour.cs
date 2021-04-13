@@ -13,8 +13,9 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     public string nextSceneName;
 
     private GameObject choicesManager;
-
     private GameObject popupObject;
+    // private GameObject exclamationMark;
+    // private bool hasSelected;
     // private TransitionZoneBehaviour selfZoneBehaviour;
 
     void Start()
@@ -24,16 +25,16 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     }
 
     void Update()
-    {
+    {   
         if (!popupObject && base.IsPlayerNearby(radius))
         {
             popupObject = base.CreatePopup(popupCanvas, popupScale, this, prompt);
-            PlayPopupSound();
         }
         else if (popupObject && !base.IsPlayerNearby(radius))
         {
             DestroyPopup(popupObject);
-        }
+            PlayPopupSound();
+        }   
     }
 
     public void TransitionToNextScene()

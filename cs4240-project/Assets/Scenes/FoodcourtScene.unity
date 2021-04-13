@@ -654,6 +654,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 351913793974133567, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: prompt
       value: Takeaway or dining in?
@@ -688,15 +692,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.06
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.08
+      value: 6.543
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5249,11 +5253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.08
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 412047099556405496, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5310,6 +5314,10 @@ PrefabInstance:
     - target: {fileID: 6320251814432085097, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
       propertyPath: nextSceneName
       value: Supermarket
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167072450610944064, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb6ffd471f67874f86cbddfb9eb188a, type: 3}
@@ -6574,6 +6582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 351913793974133567, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4378617530901479264, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: prompt
       value: Takeaway or dining in?
@@ -6604,11 +6616,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.07
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5721975636434423699, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
       propertyPath: m_LocalPosition.z
