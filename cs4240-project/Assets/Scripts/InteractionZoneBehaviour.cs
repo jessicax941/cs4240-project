@@ -12,8 +12,10 @@ public class InteractionZoneBehaviour : MonoBehaviour
 
     protected GameObject CreatePopup(GameObject popupPrefab, Vector3 popupScale, InteractionZoneBehaviour zoneBehaviour, string prompt)
     {
+        
         Vector3 directionToPlayer = (Camera.main.transform.position - gameObject.transform.position).normalized;
-        GameObject createdPopup = Instantiate(popupPrefab, gameObject.transform.position, gameObject.transform.rotation);
+        // Vector3 directionToPlayer = (Camera.main.transform.forward - gameObject.transform.forward).normalized;
+        GameObject createdPopup = Instantiate(popupPrefab, gameObject.transform.position + directionToPlayer, gameObject.transform.rotation);
         createdPopup.transform.localScale = popupScale;
 
         if (zoneBehaviour.GetType() == typeof(ChoiceZoneBehaviour))
