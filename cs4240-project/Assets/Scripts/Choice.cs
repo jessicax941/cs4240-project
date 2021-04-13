@@ -2,11 +2,13 @@ public enum GoodChoice
 {
     Chicken,
     DineIn,
+    Bag
 }
 
 public enum BadChoice {
     Pork,
-    Takeaway
+    Takeaway,
+    PlasticBag
 }
 
 public static class ChoiceRepresentation
@@ -19,6 +21,8 @@ public static class ChoiceRepresentation
                 return "Chicken";
             case GoodChoice.DineIn:
                 return "Dine In";
+            case GoodChoice.Bag:
+                return "No";
             default:
                 return "Unknown GoodChoice value";
         }
@@ -32,6 +36,8 @@ public static class ChoiceRepresentation
                 return "Pork";
             case BadChoice.Takeaway:
                 return "Takeaway";
+            case BadChoice.PlasticBag:
+                return "Yes";
             default:
                 return "Unknown BadChoice value";
         }
