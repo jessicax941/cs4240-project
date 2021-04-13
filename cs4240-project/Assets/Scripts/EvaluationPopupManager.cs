@@ -18,11 +18,11 @@ public class EvaluationPopupManager : MonoBehaviour
             {
                 popup.SetActive(true);
             }
-            else
-            {
-                popups.Add(popup);
-                popup.SetActive(false);
-            }
+            // else
+            // {
+            //     popups.Add(popup);
+            //     popup.SetActive(false);
+            // }
         }
 
         // enable popups to appear in scene based on good and bad choices made by player
