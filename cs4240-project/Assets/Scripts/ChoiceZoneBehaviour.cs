@@ -5,30 +5,23 @@ using UnityEngine;
 public class ChoiceZoneBehaviour : InteractionZoneBehaviour
 {
     public GameObject popupCanvas;
-    public List<string> choices;
+    public GameObject utensilsPopup;
     public float radius;
     public Vector3 popupScale;
     public string prompt;
     public GoodChoice goodChoice;
     public BadChoice badChoice;
+    public GameObject exclamationMark;
 
     private GameObject choicesManager;
-    private int numChoices;
-    // private int currChoice;
     private GameObject popupObject;
-    private GameObject exclamationMark;
     private bool hasSelected;
+    // only used for DineInTakeaway popup
+    private bool madeGoodChoice;
 
     void Start()
     {
-        numChoices = choices.Count - 1;
-        // currChoice = 0;
         choicesManager = GameObject.FindWithTag("ChoicesManager");
-        GameObject childObject = transform.GetChild(0).gameObject;
-        if (childObject)
-        {
-            exclamationMark = childObject;
-        }
     }
 
     void Update()
@@ -50,6 +43,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (choicesManager)
         {
+            madeGoodChoice = true;
             MakePopupDisappear();
             choicesManager.GetComponent<ChoicesManager>().ChoseGoodChoice(goodChoice);
         }
@@ -63,6 +57,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (choicesManager)
         {
+            madeGoodChoice = false;
             MakePopupDisappear();
             choicesManager.GetComponent<ChoicesManager>().ChoseBadChoice(badChoice);
         }
@@ -76,9 +71,25 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         hasSelected = true;
         exclamationMark.SetActive(false);
+        if (gameObject.name.Contains("DineInTakeaway"))
+        {
+            // show popup for utensils based on choice made
+            DisplayUtensilsBasedOnChoice();
+        }
         if (popupObject)
         {
             Destroy(popupObject);
+        }
+    }
+
+    private void DisplayUtensilsBasedOnChoice()
+    {
+        if (!madeGoodChoice)
+        {
+            // player picked takeaway, ask if utensils needed
+            utensilsPopup.SetActive(true);
+            utensilsPopup.transform.position = gameObject.transform.position;
+            utensilsPopup.transform.rotation = gameObject.transform.rotation;
         }
     }
 
