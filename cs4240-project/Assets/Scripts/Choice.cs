@@ -1,3 +1,6 @@
+/// <summary>
+/// Representation of good (more environmentally-friendly) and Bad (less environmentally-friendly) choices.
+/// </summary>
 public enum GoodChoice
 {
     Chicken,
@@ -13,6 +16,9 @@ public enum BadChoice {
     Utensils
 }
 
+/// <summary>
+/// Converts Choice to string format to be used in the UI buttons.
+/// </summary>
 public static class ChoiceRepresentation
 {
     public static string ToString(this GoodChoice choice)

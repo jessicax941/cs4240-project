@@ -4,6 +4,9 @@ using UnityEngine.EventSystems;
 using HTC.UnityPlugin.Pointer3D;
 using HTC.UnityPlugin.Utility;
 
+/// <summary>
+/// Allow player to teleport in scenes.
+/// </summary>
 public class CustomTeleportable : MonoBehaviour, IPointer3DPressExitHandler
 {
     public Transform target;

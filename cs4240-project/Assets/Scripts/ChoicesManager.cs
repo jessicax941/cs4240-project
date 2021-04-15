@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Keeps track of choices made throughout the scenes. Only one instance of ChoicesManager in all the scenes.
+/// </summary>
 public class ChoicesManager : MonoBehaviour
 {
 
@@ -22,16 +25,6 @@ public class ChoicesManager : MonoBehaviour
 
     void Awake()
     {
-        // for testing purposes
-        // goodChoices.Add(GoodChoice.Chicken);
-        // goodChoices.Add(GoodChoice.DineIn);
-        // goodChoices.Add(GoodChoice.Bag);
-        // goodChoices.Add(GoodChoice.NoUtensils);
-        // badChoices.Add(BadChoice.Takeaway);
-        // badChoices.Add(BadChoice.Pork);
-        // badChoices.Add(BadChoice.PlasticBag);
-        // badChoices.Add(BadChoice.Utensils);
-
         // Ensure only one instance of ChoicesManager
         if (instance == null)
         {
@@ -44,10 +37,6 @@ public class ChoicesManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-    }
-
-    void Start() {
-
     }
 
     public void ChoseGoodChoice(GoodChoice goodChoice)
@@ -64,7 +53,7 @@ public class ChoicesManager : MonoBehaviour
 
     private void HandleSpecialCase()
     {
-        // special case of chose takeaway but do not need cutlery
+        // Special case of chose takeaway but do not need cutlery
         if (badChoices.Contains(BadChoice.Takeaway) && goodChoices.Contains(GoodChoice.NoUtensils))
         {
             badChoices.RemoveAll(choice => choice.Equals(BadChoice.Takeaway));

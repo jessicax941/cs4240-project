@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
+/// <summary>
+/// Creates popup in the evaluation scenes that explains why player's choices were environmentally-friendly or not
+/// to help them understand why they got into the good/bad evalulation scene and realise the impact of their choices.
+/// </summary>
 public class EvaluationPopup : MonoBehaviour
 {
     public float radius = 2f;
@@ -23,10 +26,10 @@ public class EvaluationPopup : MonoBehaviour
 
     public void SpawnExtraObjectIfAny()
     {
-        // for more dynamic scenes
+        // For more dynamic scenes
         if (objectToSpawn && !spawnedObject)
         {
-            // only spawn object if there is an object to spawn and if it has not been spawned yet
+            // Only spawn object if there is an object to spawn and if it has not been spawned yet
             spawnedObject = Instantiate(objectToSpawn, new Vector3(transform.position.x, Yposition, transform.position.z), Quaternion.identity, transform.parent);
             if (spawnedObject) {
                 spawnedObject.transform.Rotate(rotation, Space.World);
@@ -38,6 +41,7 @@ public class EvaluationPopup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Display popup only when player is nearby
         if (!contents.activeSelf && IsPlayerNearby(radius))
         {
             contents.SetActive(true);
@@ -67,7 +71,5 @@ public class EvaluationPopup : MonoBehaviour
     {
         transform.LookAt(2 * transform.position - Camera.main.transform.position, Vector3.up);
     }
-
-    
 
 }

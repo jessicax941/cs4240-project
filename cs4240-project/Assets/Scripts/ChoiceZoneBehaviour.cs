@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Interactable zone to allow players to choose from two options given (one more environmentally-friendly than the other).
+/// </summary>
 public class ChoiceZoneBehaviour : InteractionZoneBehaviour
 {
     public GameObject popupCanvas;
@@ -17,7 +20,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     private GameObject popupObject;
     private AudioSource audioSource;
     private bool hasSelected;
-    // only used for DineInTakeaway popup
+    // Only used for DineInTakeaway popup
     private bool madeGoodChoice;
 
     void Start()
@@ -78,7 +81,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
         exclamationMark.SetActive(false);
         if (gameObject.name.Contains("DineInTakeaway"))
         {
-            // show popup for utensils based on choice made
+            // Show popup for utensils based on choice made
             DisplayUtensilsBasedOnChoice();
         }
         if (popupObject)
@@ -91,7 +94,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     {
         if (!madeGoodChoice)
         {
-            // player picked takeaway, ask if utensils needed
+            // Player picked takeaway so ask if utensils needed
             utensilsPopup.SetActive(true);
             utensilsPopup.transform.position = gameObject.transform.position;
             utensilsPopup.transform.rotation = gameObject.transform.rotation;

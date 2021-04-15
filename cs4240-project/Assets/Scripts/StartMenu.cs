@@ -4,26 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// The start menu in the first scene, consists of both the menu panel and introduction (tutorial) panel.
+/// </summary>
 public class StartMenu : MonoBehaviour
 {
 
     public GameObject introPanel;
     public GameObject startMenuPanel;
+    public Text introTitle;
+    public Text introText;
+    public Text nextButtonText;
+
     private string[] introTitles;
     private string[] introTexts;
-
     private int introIndex;
     private int numIntroPanels;
-    private Text introTitle;
-    private Text introText;
-    private Text nextButtonText;
 
     private void Start()
     {
         introIndex = 0;
-        introTitle = transform.Find("Intro/IntroTitle").GetComponent<Text>();
-        introText = transform.Find("Intro/IntroText").GetComponent<Text>();
-        nextButtonText = transform.Find("Intro/NextButton/NextText").GetComponent<Text>();
         introPanel.SetActive(false);
         startMenuPanel.SetActive(true);
 
@@ -58,6 +58,7 @@ public class StartMenu : MonoBehaviour
         UpdateText();
     }
 
+    // Handle back button
     public void BackPressed()
     {
         if (introIndex == 0)
@@ -75,6 +76,7 @@ public class StartMenu : MonoBehaviour
         nextButtonText.text = "Next";
     }
 
+    // Handle next button
     public void NextPressed()
     {
         if (introIndex == numIntroPanels)

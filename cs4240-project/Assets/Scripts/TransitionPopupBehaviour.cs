@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Popup to allow player to move on to the next scene.
+/// </summary>
 public class TransitionPopupBehaviour : MonoBehaviour
 {
     public TransitionZoneBehaviour parentZone;
     public string prompt;
-
-    private Text text;
-    private Button yesButton;
+    public Text promptText;
+    public Button yesButton;
 
     private void Start()
     {
-        Transform popupContents = gameObject.transform.Find("TransitionPopupContents");
-        text = popupContents.Find("Text").GetComponent<Text>();
-        text.text = prompt;
+        promptText.text = prompt;
 
-        yesButton = popupContents.Find("YesButton").GetComponent<Button>();
         yesButton.onClick.AddListener(() => { parentZone.TransitionToNextScene(); });
     }
 

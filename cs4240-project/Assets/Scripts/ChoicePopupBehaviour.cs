@@ -3,37 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Popup that gives player two options, one good choice (more environmentally-friendly),
+/// and one bad choice (less environmentally-friendly).
+/// </summary>
 public class ChoicePopupBehaviour : MonoBehaviour
 {
     public ChoiceZoneBehaviour parentZone;
     public string prompt;
-
-    private Text promptText;
-    private Button goodChoiceButton;
-    private Button badChoiceButton;
+    public Text promptText;
+    public Button goodChoiceButton;
+    public Text goodChoiceText;
+    public Button badChoiceButton;
+    public Text badChoiceText;
 
     private void Start()
     {
-        Transform popupContents = gameObject.transform.Find("ChoicePopupContents");
-        promptText = popupContents.Find("Text").GetComponent<Text>();
         promptText.text = prompt;
 
-        Transform goodChoiceButton = popupContents.Find("GoodChoiceButton");
-        goodChoiceButton.GetComponent<Button>().onClick.AddListener(() => { parentZone.ChoseGoodChoice(); });
-        goodChoiceButton.Find("Text").GetComponent<Text>().text = ChoiceRepresentation.ToString(parentZone.goodChoice);
+        goodChoiceButton.onClick.AddListener(() => { parentZone.ChoseGoodChoice(); });
+        goodChoiceText.text = ChoiceRepresentation.ToString(parentZone.goodChoice);
 
-        Transform badChoiceButton = popupContents.Find("BadChoiceButton");
-        badChoiceButton.GetComponent<Button>().onClick.AddListener(() => { parentZone.ChoseBadChoice(); });
-        badChoiceButton.Find("Text").GetComponent<Text>().text = ChoiceRepresentation.ToString(parentZone.badChoice);
+        badChoiceButton.onClick.AddListener(() => { parentZone.ChoseBadChoice(); });
+        badChoiceText.text = ChoiceRepresentation.ToString(parentZone.badChoice);
     }
 
     void LateUpdate()
     {
         transform.LookAt(2 * transform.position - Camera.main.transform.position, Vector3.up);
-    }
-
-    public void UpdateText(string newText)
-    {
-        promptText.text = newText;
     }
 }

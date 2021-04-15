@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Displayed in the evaluation scenes to allow player to return to the main menu.
+/// </summary>
 public class EndingPrompt : MonoBehaviour
 {
     public GameObject prompt;
@@ -16,6 +19,7 @@ public class EndingPrompt : MonoBehaviour
 
     private void Update()
     {
+        // Show prompt only when player is nearby
         if ((Camera.main.transform.position - transform.position).magnitude < radius)
         {
             prompt.SetActive(true);
@@ -33,13 +37,13 @@ public class EndingPrompt : MonoBehaviour
         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
         if (audioSource)
         {
-            // Debug.Log("playing sound");
             audioSource.Play();
         }
     }
 
     private void LateUpdate()
     {
+        // Rotate the prompt to follow the player's camera
         Vector3 newRotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position).eulerAngles;
         newRotation.x = 0;
         newRotation.z = 0;
@@ -51,8 +55,4 @@ public class EndingPrompt : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void QuitApp()
-    {
-        Application.Quit();
-    }
 }

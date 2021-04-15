@@ -2,96 +2,75 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Decides which evaluation popups to show in the evaluation scenes.
+/// </summary>
 public class EvaluationPopupManager : MonoBehaviour
 {
     public List<GameObject> hasExtras = new List<GameObject>();
 
-    // public List<GameObject> alwaysEnable = new List<GameObject>(); 
     private List<GameObject> popups = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        // get all the child popup GOs
+        // Get all the child popup GOs
         foreach (Transform child in transform)
         {
             GameObject popup = child.gameObject;
             popups.Add(popup);
-
-            // if (alwaysEnable.Contains(popup))
-            // {
-            //     popup.SetActive(true);
-            // }
-            // else
-            // {
-            //     popup.SetActive(false);
-            // }
         }
 
+        // Hide all extra objects by default
         foreach (GameObject popupWithExtra in hasExtras)
         {
             popupWithExtra.SetActive(false);
         }
 
-        // enable popups to appear in scene based on good and bad choices made by player
+        // Enable popups to appear in scene based on good and bad choices made by player
         GameObject choicesManagerGO = GameObject.FindWithTag("ChoicesManager");
         if (choicesManagerGO)
         {
-            Debug.Log("found cm");
             ChoicesManager cm = choicesManagerGO.GetComponent<ChoicesManager>();
             List<GoodChoice> goodChoices = cm.GetGoodChoices();
             List<BadChoice> badChoices = cm.GetBadChoices();
 
-            // HandleSpecialCase(goodChoices, badChoices);
-
-            EnablePopups(goodChoices);            
+            EnablePopups(goodChoices);
             EnablePopups(badChoices);
         }
     }
 
-    // private void HandleSpecialCase(List<GoodChoice> goodChoices, List<BadChoice> badChoices)
-    // {
-    //     // special case of chose takeaway but do not need cutlery
-    //     if (badChoices.Contains(BadChoice.Takeaway) && goodChoices.Contains(GoodChoice.NoUtensils)
-    //     {
-    //         badChoices.Remove(BadChoice.Takeaway);
-    //     }
-    // }
+    // Enable popups for the good choices
     private void EnablePopups(List<GoodChoice> goodChoices)
     {
         foreach (GoodChoice choice in goodChoices)
         {
             string choiceString = ChoiceRepresentation.ToString(choice);
-            Debug.Log("good choice: " + choiceString);
             EnablePopup(choiceString);
         }
 
+        // Map choice of 'no utensils' to DineIn popup
         if (goodChoices.Contains(GoodChoice.NoUtensils))
         {
             GameObject respectivePopup = popups.Find(popup => popup.name.Contains("DineIn"));
             if (respectivePopup)
             {
-                // Debug.Log("found popup: " + respectivePopup.GetComponent<EvaluationPopup>().GetTitle());
                 respectivePopup.SetActive(true);
-                // respectivePopup.GetComponent<EvaluationPopup>().SpawnExtraObjectIfAny();
-            } 
-            else
-            {
-                // Debug.Log("did not find popup for " + choiceString);
             }
         }
     }
 
+    // Enable popups for the bad choices
     private void EnablePopups(List<BadChoice> badChoices)
     {
         foreach (BadChoice choice in badChoices)
         {
             string choiceString = ChoiceRepresentation.ToString(choice);
-            Debug.Log("bad choice: " + choiceString);
             EnablePopup(choiceString);
         }
     }
 
+    // Find respective popup for the choice made and enable it
     private void EnablePopup(string choiceString)
     {
         choiceString = choiceString.Replace(" ", string.Empty);
@@ -99,13 +78,8 @@ public class EvaluationPopupManager : MonoBehaviour
         GameObject respectivePopup = popups.Find(popup => popup.name.Contains(choiceString));
         if (respectivePopup)
         {
-            // Debug.Log("found popup: " + respectivePopup.GetComponent<EvaluationPopup>().GetTitle());
             respectivePopup.SetActive(true);
             respectivePopup.GetComponent<EvaluationPopup>().SpawnExtraObjectIfAny();
-        } 
-        else
-        {
-            Debug.Log("did not find popup for " + choiceString);
         }
     }
 }
