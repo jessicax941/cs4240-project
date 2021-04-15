@@ -11,15 +11,17 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
     public Vector3 popupScale;
     public bool isLastScene = false;
     public string nextSceneName;
+    public GameObject exclamationMark;
 
     private GameObject choicesManager;
     private GameObject popupObject;
-    // private GameObject exclamationMark;
+    private AudioSource audioSource;
     // private bool hasSelected;
     // private TransitionZoneBehaviour selfZoneBehaviour;
 
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         choicesManager = GameObject.FindWithTag("ChoicesManager");
         // selfZoneBehaviour = gameObject.GetComponent<TransitionZoneBehaviour>();
     }
@@ -29,12 +31,14 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
         if (!popupObject && base.IsPlayerNearby(radius))
         {
             popupObject = base.CreatePopup(popupCanvas, popupScale, this, prompt);
+            exclamationMark.SetActive(false);
+            PlayPopupSound();
         }
         else if (popupObject && !base.IsPlayerNearby(radius))
         {
             DestroyPopup(popupObject);
-            PlayPopupSound();
-        }   
+            exclamationMark.SetActive(true);
+        }
     }
 
     public void TransitionToNextScene()
@@ -72,7 +76,6 @@ public class TransitionZoneBehaviour : InteractionZoneBehaviour
 
     private void PlayPopupSound()
     {
-        AudioSource audioSource = gameObject.GetComponent<AudioSource>();
         if (audioSource)
         {
             // Debug.Log("playing sound");

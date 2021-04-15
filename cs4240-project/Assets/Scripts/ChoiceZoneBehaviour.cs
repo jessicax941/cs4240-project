@@ -15,6 +15,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
 
     private GameObject choicesManager;
     private GameObject popupObject;
+    private AudioSource audioSource;
     private bool hasSelected;
     // only used for DineInTakeaway popup
     private bool madeGoodChoice;
@@ -22,6 +23,7 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
     void Start()
     {
         choicesManager = GameObject.FindWithTag("ChoicesManager");
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -31,10 +33,13 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
             if (!popupObject && base.IsPlayerNearby(radius))
             {
                 popupObject = base.CreatePopup(popupCanvas, popupScale, this, prompt);
+                exclamationMark.SetActive(false);
+                PlayPopupSound();
             }
             if (popupObject && !base.IsPlayerNearby(radius))
             {
                 DestroyPopup(popupObject);
+                exclamationMark.SetActive(true);
             }
         }
         
@@ -90,6 +95,14 @@ public class ChoiceZoneBehaviour : InteractionZoneBehaviour
             utensilsPopup.SetActive(true);
             utensilsPopup.transform.position = gameObject.transform.position;
             utensilsPopup.transform.rotation = gameObject.transform.rotation;
+        }
+    }
+
+    private void PlayPopupSound()
+    {
+        if (audioSource)
+        {
+            audioSource.Play();
         }
     }
 
