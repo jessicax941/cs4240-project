@@ -1460,7 +1460,7 @@ Transform:
   - {fileID: 1492851122}
   - {fileID: 1849785597}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &469818256 stripped
 Transform:
@@ -5772,49 +5772,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400056, guid: b1dd02c4daa7e6248ab9cf52038f20cf, type: 3}
   m_PrefabInstance: {fileID: 2033632292}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2043430171
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2043430173}
-  - component: {fileID: 2043430172}
-  m_Layer: 0
-  m_Name: ChoicesManagerTemp
-  m_TagString: ChoicesManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2043430172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043430171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ae12618d6599540a2d5f8c51cbd2bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2043430173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043430171}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9379275, y: 1.8888941, z: -2.2847357}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2054336314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400014, guid: b1dd02c4daa7e6248ab9cf52038f20cf, type: 3}
@@ -5964,7 +5921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802427840128974221, guid: fe974c7ae81753f40acbb83fffbdca4f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4802427840128974221, guid: fe974c7ae81753f40acbb83fffbdca4f, type: 3}
       propertyPath: m_LocalPosition.x

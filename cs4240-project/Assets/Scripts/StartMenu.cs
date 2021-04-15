@@ -36,24 +36,17 @@ public class StartMenu : MonoBehaviour
         introTexts = new string[numIntroPanels + 1];
         introTexts[0] = "Ecoverse is a VR simulation that aims to teach you how your actions can affect the environment.";
         introTexts[1] = "You will have to traverse a few different locations, and make choices at each location that will affect the ending you receive.";
-        introTexts[2] = "Left Hand Trackpad = Teleport\nTrigger Press (either hand) = Press button";
-        introTexts[3] = "We hope you enjoy the game!";
+        introTexts[2] = "Thumb Trackpad (either hand):\nTeleport\nTrigger Button (either hand):\nClick Button";
+        introTexts[3] = "We hope you enjoy the game!\nThe future lies in your hands... (literally)";
     }
 
     public void StartApp()
     {
-        Debug.Log("Start");
         StartIntro();
-    }
-
-    public void OpenSettings()
-    {
-        Debug.Log("Settings");
     }
 
     public void QuitApp()
     {
-        Debug.Log("quitting");
         Application.Quit();
     }
 
