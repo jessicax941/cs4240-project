@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndingPrompt : MonoBehaviour
 {
     public GameObject prompt;
+    public GameObject exclamationMark;
     public float radius;
 
     private void Start()
@@ -18,11 +19,13 @@ public class EndingPrompt : MonoBehaviour
         if ((Camera.main.transform.position - transform.position).magnitude < radius)
         {
             prompt.SetActive(true);
+            exclamationMark.SetActive(false);
             PlaySound();
         }
         else
         {
             prompt.SetActive(false);
+            exclamationMark.SetActive(true);
         }
     }
     void PlaySound()

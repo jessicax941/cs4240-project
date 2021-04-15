@@ -1531,12 +1531,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
-  choices: []
-  radius: 6.05
+  utensilsPopup: {fileID: 0}
+  radius: 4
   popupScale: {x: 0.005, y: 0.005, z: 0.005}
   prompt: Do you want to get chicken or pork?
   goodChoice: 0
   badChoice: 0
+  exclamationMark: {fileID: 1997244971}
 --- !u!1001 &495789532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2368,12 +2369,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupCanvas: {fileID: 2925913861661828599, guid: f594605a6a2e33d4e98ad427de404adb, type: 3}
-  choices: []
-  radius: 6.05
+  utensilsPopup: {fileID: 0}
+  radius: 4
   popupScale: {x: 0.005, y: 0.005, z: 0.005}
   prompt: Do you need a plastic bag?
   goodChoice: 2
   badChoice: 2
+  exclamationMark: {fileID: 973426985}
 --- !u!1001 &841930908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2588,6 +2590,11 @@ Transform:
   m_Father: {fileID: 864045379}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &973426985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1128696066713270661, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+  m_PrefabInstance: {fileID: 767952183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &981648105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4284,6 +4291,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 683173461616160608, guid: dc303bc0e2f0a4b45af5d0d9e26231f8, type: 3}
   m_PrefabInstance: {fileID: 1416312022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1997244971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1128696066713270661, guid: 18248db068e86c34bbea070326fdbb76, type: 3}
+  m_PrefabInstance: {fileID: 483315726}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2028868073 stripped
 Transform:
