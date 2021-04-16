@@ -68,6 +68,15 @@ public class EvaluationPopupManager : MonoBehaviour
             string choiceString = ChoiceRepresentation.ToString(choice);
             EnablePopup(choiceString);
         }
+
+        // if (badChoices.Contains(BadChoice.Utensils))
+        // {
+        //     GameObject respectivePopup = popups.Find(popup => popup.name.Contains("Utensils"));
+        //     if (respectivePopup)
+        //     {
+        //         respectivePopup.SetActive(true);
+        //     }
+        // }
     }
 
     // Find respective popup for the choice made and enable it

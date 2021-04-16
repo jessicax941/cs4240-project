@@ -5160,6 +5160,10 @@ PrefabInstance:
       propertyPath: radius
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6614485954850623836, guid: fe974c7ae81753f40acbb83fffbdca4f, type: 3}
+      propertyPath: exclamationMark
+      value: 
+      objectReference: {fileID: 111729806}
     - target: {fileID: 6802164258355888352, guid: fe974c7ae81753f40acbb83fffbdca4f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -5178,6 +5182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe974c7ae81753f40acbb83fffbdca4f, type: 3}
+--- !u!1 &111729806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6137831205004450394, guid: fe974c7ae81753f40acbb83fffbdca4f, type: 3}
+  m_PrefabInstance: {fileID: 111729805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &120334757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 281f82fcf4326a14b93a95275cc06e7b, type: 3}

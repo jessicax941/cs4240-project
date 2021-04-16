@@ -47,7 +47,14 @@ public class ChoicesManager : MonoBehaviour
 
     public void ChoseBadChoice(BadChoice badChoice)
     {
-        badChoices.Add(badChoice);
+        if (badChoices.Contains(BadChoice.Takeaway) && badChoice.Equals(BadChoice.Utensils))
+        {
+            // Don't add 'utensils' bad choice since 'takeaway' is already counted
+        }
+        else
+        {
+            badChoices.Add(badChoice);
+        }
         HandleSpecialCase();
     }
 
@@ -56,7 +63,7 @@ public class ChoicesManager : MonoBehaviour
         // Special case of chose takeaway but do not need cutlery
         if (badChoices.Contains(BadChoice.Takeaway) && goodChoices.Contains(GoodChoice.NoUtensils))
         {
-            badChoices.RemoveAll(choice => choice.Equals(BadChoice.Takeaway));
+            badChoices.Remove(BadChoice.Takeaway);
         }
     }
 
